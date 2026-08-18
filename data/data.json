@@ -1,0 +1,3154 @@
+{
+  "version": "2.0",
+  "root": "G:\\医",
+  "generated_at": "2026-08-17 21:50:17",
+  "stats": {
+    "folders": 13,
+    "files": 80,
+    "thumbnails": 0,
+    "failed": 0,
+    "skipped": 0,
+    "deleted": 0,
+    "new": 0,
+    "cached": 80,
+    "elapsed_sec": 0.47
+  },
+  "exts": [
+    {
+      "ext": "pdf",
+      "count": 64,
+      "category": "pdf"
+    },
+    {
+      "ext": "doc",
+      "count": 12,
+      "category": "word"
+    },
+    {
+      "ext": "epub",
+      "count": 4,
+      "category": "ebook"
+    }
+  ],
+  "tree": [
+    {
+      "id": "d19ea57a7dbc",
+      "pid": "",
+      "type": "folder",
+      "name": "全书",
+      "path": "G:\\医\\全书",
+      "rel_path": "全书",
+      "depth": 1,
+      "children": [
+        {
+          "id": "c08609cc5d16",
+          "pid": "d19ea57a7dbc",
+          "type": "file",
+          "name": "明清名医全书大成_唐容川医学全书 (王咪咪等主编).pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\全书\\明清名医全书大成_唐容川医学全书 (王咪咪等主编).pdf",
+          "rel_path": "全书/明清名医全书大成_唐容川医学全书 (王咪咪等主编).pdf",
+          "depth": 2,
+          "size": 30877992,
+          "size_text": "29.4 MB",
+          "thumbnail": "assets/thumbnails/c08609cc5d16.png",
+          "thumbnails": [
+            "assets/thumbnails/c08609cc5d16.png",
+            "assets/thumbnails/c08609cc5d16_2.png",
+            "assets/thumbnails/c08609cc5d16_3.png"
+          ]
+        },
+        {
+          "id": "aa408e9e4feb",
+          "pid": "d19ea57a7dbc",
+          "type": "file",
+          "name": "明清名医全书大成_张璐医学全书 (張民慶等主編).pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\全书\\明清名医全书大成_张璐医学全书 (張民慶等主編).pdf",
+          "rel_path": "全书/明清名医全书大成_张璐医学全书 (張民慶等主編).pdf",
+          "depth": 2,
+          "size": 47327728,
+          "size_text": "45.1 MB",
+          "thumbnail": "assets/thumbnails/aa408e9e4feb.png",
+          "thumbnails": [
+            "assets/thumbnails/aa408e9e4feb.png",
+            "assets/thumbnails/aa408e9e4feb_2.png",
+            "assets/thumbnails/aa408e9e4feb_3.png"
+          ]
+        },
+        {
+          "id": "cec245a0cd45",
+          "pid": "d19ea57a7dbc",
+          "type": "file",
+          "name": "火神之祖-槐轩医学全书 (清·刘止唐  刘子维) .epub",
+          "ext": "epub",
+          "category": "ebook",
+          "path": "G:\\医\\全书\\火神之祖-槐轩医学全书 (清·刘止唐  刘子维) .epub",
+          "rel_path": "全书/火神之祖-槐轩医学全书 (清·刘止唐  刘子维) .epub",
+          "depth": 2,
+          "size": 452317,
+          "size_text": "441.7 KB",
+          "thumbnail": "assets/thumbnails/cec245a0cd45.png",
+          "thumbnails": [
+            "assets/thumbnails/cec245a0cd45.png"
+          ]
+        },
+        {
+          "id": "e927b1155a7e",
+          "pid": "d19ea57a7dbc",
+          "type": "file",
+          "name": "胥山老人王琢崖纂辑医书十二种 医林指月 侣山堂类辩（上卷） 本草崇原（下卷）(徐麟祥述).pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\全书\\胥山老人王琢崖纂辑医书十二种 医林指月 侣山堂类辩（上卷） 本草崇原（下卷）(徐麟祥述).pdf",
+          "rel_path": "全书/胥山老人王琢崖纂辑医书十二种 医林指月 侣山堂类辩（上卷） 本草崇原（下卷）(徐麟祥述).pdf",
+          "depth": 2,
+          "size": 46501579,
+          "size_text": "44.3 MB",
+          "thumbnail": "assets/thumbnails/e927b1155a7e.png",
+          "thumbnails": [
+            "assets/thumbnails/e927b1155a7e.png",
+            "assets/thumbnails/e927b1155a7e_2.png",
+            "assets/thumbnails/e927b1155a7e_3.png"
+          ]
+        },
+        {
+          "id": "c671ce209b0c",
+          "pid": "d19ea57a7dbc",
+          "type": "file",
+          "name": "胥山老人王琢崖纂辑医书十二种 医林指月 侣山堂类辩（下卷） 学古诊则 （一帙、二帙、三帙上） (徐麟祥述).pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\全书\\胥山老人王琢崖纂辑医书十二种 医林指月 侣山堂类辩（下卷） 学古诊则 （一帙、二帙、三帙上） (徐麟祥述).pdf",
+          "rel_path": "全书/胥山老人王琢崖纂辑医书十二种 医林指月 侣山堂类辩（下卷） 学古诊则 （一帙、二帙、三帙上） (徐麟祥述).pdf",
+          "depth": 2,
+          "size": 47881689,
+          "size_text": "45.7 MB",
+          "thumbnail": "assets/thumbnails/c671ce209b0c.png",
+          "thumbnails": [
+            "assets/thumbnails/c671ce209b0c.png",
+            "assets/thumbnails/c671ce209b0c_2.png",
+            "assets/thumbnails/c671ce209b0c_3.png"
+          ]
+        },
+        {
+          "id": "72bfe995828d",
+          "pid": "d19ea57a7dbc",
+          "type": "file",
+          "name": "胥山老人王琢崖纂辑医书十二种 医林指月 医学心法 易氏医按 (徐麟祥述).pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\全书\\胥山老人王琢崖纂辑医书十二种 医林指月 医学心法 易氏医按 (徐麟祥述).pdf",
+          "rel_path": "全书/胥山老人王琢崖纂辑医书十二种 医林指月 医学心法 易氏医按 (徐麟祥述).pdf",
+          "depth": 2,
+          "size": 49617067,
+          "size_text": "47.3 MB",
+          "thumbnail": "assets/thumbnails/72bfe995828d.png",
+          "thumbnails": [
+            "assets/thumbnails/72bfe995828d.png",
+            "assets/thumbnails/72bfe995828d_2.png",
+            "assets/thumbnails/72bfe995828d_3.png"
+          ]
+        },
+        {
+          "id": "a03c23554556",
+          "pid": "d19ea57a7dbc",
+          "type": "file",
+          "name": "胥山老人王琢崖纂辑医书十二种 医林指月 医学真传一卷 质疑录一卷 (徐麟祥述).pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\全书\\胥山老人王琢崖纂辑医书十二种 医林指月 医学真传一卷 质疑录一卷 (徐麟祥述).pdf",
+          "rel_path": "全书/胥山老人王琢崖纂辑医书十二种 医林指月 医学真传一卷 质疑录一卷 (徐麟祥述).pdf",
+          "depth": 2,
+          "size": 51168568,
+          "size_text": "48.8 MB",
+          "thumbnail": "assets/thumbnails/a03c23554556.png",
+          "thumbnails": [
+            "assets/thumbnails/a03c23554556.png",
+            "assets/thumbnails/a03c23554556_2.png",
+            "assets/thumbnails/a03c23554556_3.png"
+          ]
+        },
+        {
+          "id": "970d558a0c38",
+          "pid": "d19ea57a7dbc",
+          "type": "file",
+          "name": "黄元御医书十一种 .pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\全书\\黄元御医书十一种 .pdf",
+          "rel_path": "全书/黄元御医书十一种 .pdf",
+          "depth": 2,
+          "size": 17180769,
+          "size_text": "16.4 MB",
+          "thumbnail": "assets/thumbnails/970d558a0c38.png",
+          "thumbnails": [
+            "assets/thumbnails/970d558a0c38.png",
+            "assets/thumbnails/970d558a0c38_2.png",
+            "assets/thumbnails/970d558a0c38_3.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3835f388fdf7",
+      "pid": "",
+      "type": "folder",
+      "name": "医典",
+      "path": "G:\\医\\医典",
+      "rel_path": "医典",
+      "depth": 1,
+      "children": [
+        {
+          "id": "77b5443dd7cb",
+          "pid": "3835f388fdf7",
+          "type": "folder",
+          "name": "玄隐遗密",
+          "path": "G:\\医\\医典\\玄隐遗密",
+          "rel_path": "医典/玄隐遗密",
+          "depth": 2,
+          "children": [
+            {
+              "id": "dbc8f45aaa3a",
+              "pid": "77b5443dd7cb",
+              "type": "folder",
+              "name": "三申道人的书",
+              "path": "G:\\医\\医典\\玄隐遗密\\三申道人的书",
+              "rel_path": "医典/玄隐遗密/三申道人的书",
+              "depth": 3,
+              "children": [
+                {
+                  "id": "90924faa1c85",
+                  "pid": "dbc8f45aaa3a",
+                  "type": "file",
+                  "name": "《三申道人传奇》.pdf",
+                  "ext": "pdf",
+                  "category": "pdf",
+                  "path": "G:\\医\\医典\\玄隐遗密\\三申道人的书\\《三申道人传奇》.pdf",
+                  "rel_path": "医典/玄隐遗密/三申道人的书/《三申道人传奇》.pdf",
+                  "depth": 4,
+                  "size": 1189908,
+                  "size_text": "1.1 MB",
+                  "thumbnail": "assets/thumbnails/90924faa1c85.png",
+                  "thumbnails": [
+                    "assets/thumbnails/90924faa1c85.png",
+                    "assets/thumbnails/90924faa1c85_2.png",
+                    "assets/thumbnails/90924faa1c85_3.png"
+                  ]
+                },
+                {
+                  "id": "5c3f907b2c10",
+                  "pid": "dbc8f45aaa3a",
+                  "type": "file",
+                  "name": "《上古医文》！！.doc",
+                  "ext": "doc",
+                  "category": "word",
+                  "path": "G:\\医\\医典\\玄隐遗密\\三申道人的书\\《上古医文》！！.doc",
+                  "rel_path": "医典/玄隐遗密/三申道人的书/《上古医文》！！.doc",
+                  "depth": 4,
+                  "size": 3645952,
+                  "size_text": "3.5 MB",
+                  "thumbnail": "assets/thumbnails/5c3f907b2c10.png",
+                  "thumbnails": [
+                    "assets/thumbnails/5c3f907b2c10.png"
+                  ]
+                },
+                {
+                  "id": "950131bc12b2",
+                  "pid": "dbc8f45aaa3a",
+                  "type": "file",
+                  "name": "《学师三申道人》【最终版】.pdf",
+                  "ext": "pdf",
+                  "category": "pdf",
+                  "path": "G:\\医\\医典\\玄隐遗密\\三申道人的书\\《学师三申道人》【最终版】.pdf",
+                  "rel_path": "医典/玄隐遗密/三申道人的书/《学师三申道人》【最终版】.pdf",
+                  "depth": 4,
+                  "size": 1461191,
+                  "size_text": "1.4 MB",
+                  "thumbnail": "assets/thumbnails/950131bc12b2.png",
+                  "thumbnails": [
+                    "assets/thumbnails/950131bc12b2.png",
+                    "assets/thumbnails/950131bc12b2_2.png",
+                    "assets/thumbnails/950131bc12b2_3.png"
+                  ]
+                },
+                {
+                  "id": "054bcc47cc8e",
+                  "pid": "dbc8f45aaa3a",
+                  "type": "file",
+                  "name": "三申道人讲坐—平民医学基础篇.doc",
+                  "ext": "doc",
+                  "category": "word",
+                  "path": "G:\\医\\医典\\玄隐遗密\\三申道人的书\\三申道人讲坐—平民医学基础篇.doc",
+                  "rel_path": "医典/玄隐遗密/三申道人的书/三申道人讲坐—平民医学基础篇.doc",
+                  "depth": 4,
+                  "size": 493830,
+                  "size_text": "482.3 KB",
+                  "thumbnail": "assets/thumbnails/054bcc47cc8e.png",
+                  "thumbnails": [
+                    "assets/thumbnails/054bcc47cc8e.png"
+                  ]
+                },
+                {
+                  "id": "5b3aa6229e39",
+                  "pid": "dbc8f45aaa3a",
+                  "type": "file",
+                  "name": "三申道人讲座—平民医学基础篇.doc",
+                  "ext": "doc",
+                  "category": "word",
+                  "path": "G:\\医\\医典\\玄隐遗密\\三申道人的书\\三申道人讲座—平民医学基础篇.doc",
+                  "rel_path": "医典/玄隐遗密/三申道人的书/三申道人讲座—平民医学基础篇.doc",
+                  "depth": 4,
+                  "size": 509440,
+                  "size_text": "497.5 KB",
+                  "thumbnail": "assets/thumbnails/5b3aa6229e39.png",
+                  "thumbnails": [
+                    "assets/thumbnails/5b3aa6229e39.png"
+                  ]
+                },
+                {
+                  "id": "02e4cb0dd3a0",
+                  "pid": "dbc8f45aaa3a",
+                  "type": "file",
+                  "name": "九常纪 简体版.doc",
+                  "ext": "doc",
+                  "category": "word",
+                  "path": "G:\\医\\医典\\玄隐遗密\\三申道人的书\\九常纪 简体版.doc",
+                  "rel_path": "医典/玄隐遗密/三申道人的书/九常纪 简体版.doc",
+                  "depth": 4,
+                  "size": 366592,
+                  "size_text": "358.0 KB",
+                  "thumbnail": "assets/thumbnails/02e4cb0dd3a0.png",
+                  "thumbnails": [
+                    "assets/thumbnails/02e4cb0dd3a0.png"
+                  ]
+                },
+                {
+                  "id": "8872010eb37c",
+                  "pid": "dbc8f45aaa3a",
+                  "type": "file",
+                  "name": "九真要--简体版.doc",
+                  "ext": "doc",
+                  "category": "word",
+                  "path": "G:\\医\\医典\\玄隐遗密\\三申道人的书\\九真要--简体版.doc",
+                  "rel_path": "医典/玄隐遗密/三申道人的书/九真要--简体版.doc",
+                  "depth": 4,
+                  "size": 209920,
+                  "size_text": "205.0 KB",
+                  "thumbnail": "assets/thumbnails/8872010eb37c.png",
+                  "thumbnails": [
+                    "assets/thumbnails/8872010eb37c.png"
+                  ]
+                },
+                {
+                  "id": "35783ffdec1a",
+                  "pid": "dbc8f45aaa3a",
+                  "type": "file",
+                  "name": "易与医.doc",
+                  "ext": "doc",
+                  "category": "word",
+                  "path": "G:\\医\\医典\\玄隐遗密\\三申道人的书\\易与医.doc",
+                  "rel_path": "医典/玄隐遗密/三申道人的书/易与医.doc",
+                  "depth": 4,
+                  "size": 173056,
+                  "size_text": "169.0 KB",
+                  "thumbnail": "assets/thumbnails/35783ffdec1a.png",
+                  "thumbnails": [
+                    "assets/thumbnails/35783ffdec1a.png"
+                  ]
+                },
+                {
+                  "id": "7bcc8da1a36b",
+                  "pid": "dbc8f45aaa3a",
+                  "type": "file",
+                  "name": "汉字的学问.doc",
+                  "ext": "doc",
+                  "category": "word",
+                  "path": "G:\\医\\医典\\玄隐遗密\\三申道人的书\\汉字的学问.doc",
+                  "rel_path": "医典/玄隐遗密/三申道人的书/汉字的学问.doc",
+                  "depth": 4,
+                  "size": 517632,
+                  "size_text": "505.5 KB",
+                  "thumbnail": "assets/thumbnails/7bcc8da1a36b.png",
+                  "thumbnails": [
+                    "assets/thumbnails/7bcc8da1a36b.png"
+                  ]
+                },
+                {
+                  "id": "8ea2e33d1b01",
+                  "pid": "dbc8f45aaa3a",
+                  "type": "file",
+                  "name": "阴阳大论 龟书（简体版）.doc",
+                  "ext": "doc",
+                  "category": "word",
+                  "path": "G:\\医\\医典\\玄隐遗密\\三申道人的书\\阴阳大论 龟书（简体版）.doc",
+                  "rel_path": "医典/玄隐遗密/三申道人的书/阴阳大论 龟书（简体版）.doc",
+                  "depth": 4,
+                  "size": 178688,
+                  "size_text": "174.5 KB",
+                  "thumbnail": "assets/thumbnails/8ea2e33d1b01.png",
+                  "thumbnails": [
+                    "assets/thumbnails/8ea2e33d1b01.png"
+                  ]
+                },
+                {
+                  "id": "ae01e7fc3646",
+                  "pid": "dbc8f45aaa3a",
+                  "type": "file",
+                  "name": "黄帝内经上篇 简体版.doc",
+                  "ext": "doc",
+                  "category": "word",
+                  "path": "G:\\医\\医典\\玄隐遗密\\三申道人的书\\黄帝内经上篇 简体版.doc",
+                  "rel_path": "医典/玄隐遗密/三申道人的书/黄帝内经上篇 简体版.doc",
+                  "depth": 4,
+                  "size": 596992,
+                  "size_text": "583.0 KB",
+                  "thumbnail": "assets/thumbnails/ae01e7fc3646.png",
+                  "thumbnails": [
+                    "assets/thumbnails/ae01e7fc3646.png"
+                  ]
+                },
+                {
+                  "id": "d5a916959025",
+                  "pid": "dbc8f45aaa3a",
+                  "type": "file",
+                  "name": "黄帝内经上篇 繁体版.doc",
+                  "ext": "doc",
+                  "category": "word",
+                  "path": "G:\\医\\医典\\玄隐遗密\\三申道人的书\\黄帝内经上篇 繁体版.doc",
+                  "rel_path": "医典/玄隐遗密/三申道人的书/黄帝内经上篇 繁体版.doc",
+                  "depth": 4,
+                  "size": 548996,
+                  "size_text": "536.1 KB",
+                  "thumbnail": "assets/thumbnails/d5a916959025.png",
+                  "thumbnails": [
+                    "assets/thumbnails/d5a916959025.png"
+                  ]
+                },
+                {
+                  "id": "485e4ff52115",
+                  "pid": "dbc8f45aaa3a",
+                  "type": "file",
+                  "name": "黄帝内经下篇 简体版.doc",
+                  "ext": "doc",
+                  "category": "word",
+                  "path": "G:\\医\\医典\\玄隐遗密\\三申道人的书\\黄帝内经下篇 简体版.doc",
+                  "rel_path": "医典/玄隐遗密/三申道人的书/黄帝内经下篇 简体版.doc",
+                  "depth": 4,
+                  "size": 530944,
+                  "size_text": "518.5 KB",
+                  "thumbnail": "assets/thumbnails/485e4ff52115.png",
+                  "thumbnails": [
+                    "assets/thumbnails/485e4ff52115.png"
+                  ]
+                },
+                {
+                  "id": "cc4692c79348",
+                  "pid": "dbc8f45aaa3a",
+                  "type": "file",
+                  "name": "黄帝内经下篇 繁体版.doc",
+                  "ext": "doc",
+                  "category": "word",
+                  "path": "G:\\医\\医典\\玄隐遗密\\三申道人的书\\黄帝内经下篇 繁体版.doc",
+                  "rel_path": "医典/玄隐遗密/三申道人的书/黄帝内经下篇 繁体版.doc",
+                  "depth": 4,
+                  "size": 541752,
+                  "size_text": "529.1 KB",
+                  "thumbnail": "assets/thumbnails/cc4692c79348.png",
+                  "thumbnails": [
+                    "assets/thumbnails/cc4692c79348.png"
+                  ]
+                },
+                {
+                  "id": "ba2c1e9ea108",
+                  "pid": "dbc8f45aaa3a",
+                  "type": "file",
+                  "name": "龟书三讲.pdf",
+                  "ext": "pdf",
+                  "category": "pdf",
+                  "path": "G:\\医\\医典\\玄隐遗密\\三申道人的书\\龟书三讲.pdf",
+                  "rel_path": "医典/玄隐遗密/三申道人的书/龟书三讲.pdf",
+                  "depth": 4,
+                  "size": 291405,
+                  "size_text": "284.6 KB",
+                  "thumbnail": "assets/thumbnails/ba2c1e9ea108.png",
+                  "thumbnails": [
+                    "assets/thumbnails/ba2c1e9ea108.png",
+                    "assets/thumbnails/ba2c1e9ea108_2.png",
+                    "assets/thumbnails/ba2c1e9ea108_3.png"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "5e9c0eae8905",
+              "pid": "77b5443dd7cb",
+              "type": "folder",
+              "name": "玄隐遗密0三申道人刘至贤大全",
+              "path": "G:\\医\\医典\\玄隐遗密\\玄隐遗密0三申道人刘至贤大全",
+              "rel_path": "医典/玄隐遗密/玄隐遗密0三申道人刘至贤大全",
+              "depth": 3,
+              "children": [
+                {
+                  "id": "ebe0e28a1463",
+                  "pid": "5e9c0eae8905",
+                  "type": "folder",
+                  "name": "21节版本",
+                  "path": "G:\\医\\医典\\玄隐遗密\\玄隐遗密0三申道人刘至贤大全\\21节版本",
+                  "rel_path": "医典/玄隐遗密/玄隐遗密0三申道人刘至贤大全/21节版本",
+                  "depth": 4,
+                  "children": []
+                },
+                {
+                  "id": "d7a155ca1268",
+                  "pid": "5e9c0eae8905",
+                  "type": "folder",
+                  "name": "8节版本",
+                  "path": "G:\\医\\医典\\玄隐遗密\\玄隐遗密0三申道人刘至贤大全\\8节版本",
+                  "rel_path": "医典/玄隐遗密/玄隐遗密0三申道人刘至贤大全/8节版本",
+                  "depth": 4,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "b1575a972c26",
+              "pid": "77b5443dd7cb",
+              "type": "file",
+              "name": "九常記.pdf",
+              "ext": "pdf",
+              "category": "pdf",
+              "path": "G:\\医\\医典\\玄隐遗密\\九常記.pdf",
+              "rel_path": "医典/玄隐遗密/九常記.pdf",
+              "depth": 3,
+              "size": 73192548,
+              "size_text": "69.8 MB",
+              "thumbnail": "assets/thumbnails/b1575a972c26.png",
+              "thumbnails": [
+                "assets/thumbnails/b1575a972c26.png",
+                "assets/thumbnails/b1575a972c26_2.png",
+                "assets/thumbnails/b1575a972c26_3.png"
+              ]
+            },
+            {
+              "id": "1ea00b12b2b8",
+              "pid": "77b5443dd7cb",
+              "type": "file",
+              "name": "九眞要.pdf",
+              "ext": "pdf",
+              "category": "pdf",
+              "path": "G:\\医\\医典\\玄隐遗密\\九眞要.pdf",
+              "rel_path": "医典/玄隐遗密/九眞要.pdf",
+              "depth": 3,
+              "size": 63775334,
+              "size_text": "60.8 MB",
+              "thumbnail": "assets/thumbnails/1ea00b12b2b8.png",
+              "thumbnails": [
+                "assets/thumbnails/1ea00b12b2b8.png",
+                "assets/thumbnails/1ea00b12b2b8_2.png",
+                "assets/thumbnails/1ea00b12b2b8_3.png"
+              ]
+            },
+            {
+              "id": "5a4f99ba7fc9",
+              "pid": "77b5443dd7cb",
+              "type": "file",
+              "name": "玄隐遗秘.pdf",
+              "ext": "pdf",
+              "category": "pdf",
+              "path": "G:\\医\\医典\\玄隐遗密\\玄隐遗秘.pdf",
+              "rel_path": "医典/玄隐遗密/玄隐遗秘.pdf",
+              "depth": 3,
+              "size": 108836153,
+              "size_text": "103.8 MB",
+              "thumbnail": "assets/thumbnails/5a4f99ba7fc9.png",
+              "thumbnails": [
+                "assets/thumbnails/5a4f99ba7fc9.png",
+                "assets/thumbnails/5a4f99ba7fc9_2.png",
+                "assets/thumbnails/5a4f99ba7fc9_3.png"
+              ]
+            },
+            {
+              "id": "bd0789be97ee",
+              "pid": "77b5443dd7cb",
+              "type": "file",
+              "name": "道长传《内经》.pdf",
+              "ext": "pdf",
+              "category": "pdf",
+              "path": "G:\\医\\医典\\玄隐遗密\\道长传《内经》.pdf",
+              "rel_path": "医典/玄隐遗密/道长传《内经》.pdf",
+              "depth": 3,
+              "size": 3000684,
+              "size_text": "2.9 MB",
+              "thumbnail": "assets/thumbnails/bd0789be97ee.png",
+              "thumbnails": [
+                "assets/thumbnails/bd0789be97ee.png",
+                "assets/thumbnails/bd0789be97ee_2.png",
+                "assets/thumbnails/bd0789be97ee_3.png"
+              ]
+            },
+            {
+              "id": "4f7c91a87e08",
+              "pid": "77b5443dd7cb",
+              "type": "file",
+              "name": "阴阳大论（三申） 甲乙 大要旨.pdf",
+              "ext": "pdf",
+              "category": "pdf",
+              "path": "G:\\医\\医典\\玄隐遗密\\阴阳大论（三申） 甲乙 大要旨.pdf",
+              "rel_path": "医典/玄隐遗密/阴阳大论（三申） 甲乙 大要旨.pdf",
+              "depth": 3,
+              "size": 235318,
+              "size_text": "229.8 KB",
+              "thumbnail": "assets/thumbnails/4f7c91a87e08.png",
+              "thumbnails": [
+                "assets/thumbnails/4f7c91a87e08.png",
+                "assets/thumbnails/4f7c91a87e08_2.png",
+                "assets/thumbnails/4f7c91a87e08_3.png"
+              ]
+            },
+            {
+              "id": "c98ad30a4a30",
+              "pid": "77b5443dd7cb",
+              "type": "file",
+              "name": "阴阳大论（三申） 甲甲 阴阳兆.pdf",
+              "ext": "pdf",
+              "category": "pdf",
+              "path": "G:\\医\\医典\\玄隐遗密\\阴阳大论（三申） 甲甲 阴阳兆.pdf",
+              "rel_path": "医典/玄隐遗密/阴阳大论（三申） 甲甲 阴阳兆.pdf",
+              "depth": 3,
+              "size": 374973,
+              "size_text": "366.2 KB",
+              "thumbnail": "assets/thumbnails/c98ad30a4a30.png",
+              "thumbnails": [
+                "assets/thumbnails/c98ad30a4a30.png",
+                "assets/thumbnails/c98ad30a4a30_2.png",
+                "assets/thumbnails/c98ad30a4a30_3.png"
+              ]
+            },
+            {
+              "id": "ae493b3ea587",
+              "pid": "77b5443dd7cb",
+              "type": "file",
+              "name": "陰陽大論 龜書.pdf",
+              "ext": "pdf",
+              "category": "pdf",
+              "path": "G:\\医\\医典\\玄隐遗密\\陰陽大論 龜書.pdf",
+              "rel_path": "医典/玄隐遗密/陰陽大論 龜書.pdf",
+              "depth": 3,
+              "size": 48477473,
+              "size_text": "46.2 MB",
+              "thumbnail": "assets/thumbnails/ae493b3ea587.png",
+              "thumbnails": [
+                "assets/thumbnails/ae493b3ea587.png",
+                "assets/thumbnails/ae493b3ea587_2.png",
+                "assets/thumbnails/ae493b3ea587_3.png"
+              ]
+            },
+            {
+              "id": "324162a890f2",
+              "pid": "77b5443dd7cb",
+              "type": "file",
+              "name": "黃帝內經 上.pdf",
+              "ext": "pdf",
+              "category": "pdf",
+              "path": "G:\\医\\医典\\玄隐遗密\\黃帝內經 上.pdf",
+              "rel_path": "医典/玄隐遗密/黃帝內經 上.pdf",
+              "depth": 3,
+              "size": 82933311,
+              "size_text": "79.1 MB",
+              "thumbnail": "assets/thumbnails/324162a890f2.png",
+              "thumbnails": [
+                "assets/thumbnails/324162a890f2.png",
+                "assets/thumbnails/324162a890f2_2.png",
+                "assets/thumbnails/324162a890f2_3.png"
+              ]
+            },
+            {
+              "id": "568117cfde57",
+              "pid": "77b5443dd7cb",
+              "type": "file",
+              "name": "黃帝內經 下.pdf",
+              "ext": "pdf",
+              "category": "pdf",
+              "path": "G:\\医\\医典\\玄隐遗密\\黃帝內經 下.pdf",
+              "rel_path": "医典/玄隐遗密/黃帝內經 下.pdf",
+              "depth": 3,
+              "size": 69232585,
+              "size_text": "66.0 MB",
+              "thumbnail": "assets/thumbnails/568117cfde57.png",
+              "thumbnails": [
+                "assets/thumbnails/568117cfde57.png",
+                "assets/thumbnails/568117cfde57_2.png",
+                "assets/thumbnails/568117cfde57_3.png"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "539674284d1e",
+          "pid": "3835f388fdf7",
+          "type": "file",
+          "name": "伤寒杂病论·桂林古本 (民间中医经典古籍志愿编撰组).pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\医典\\伤寒杂病论·桂林古本 (民间中医经典古籍志愿编撰组).pdf",
+          "rel_path": "医典/伤寒杂病论·桂林古本 (民间中医经典古籍志愿编撰组).pdf",
+          "depth": 2,
+          "size": 2213229,
+          "size_text": "2.1 MB",
+          "thumbnail": "assets/thumbnails/539674284d1e.png",
+          "thumbnails": [
+            "assets/thumbnails/539674284d1e.png",
+            "assets/thumbnails/539674284d1e_2.png",
+            "assets/thumbnails/539674284d1e_3.png"
+          ]
+        },
+        {
+          "id": "18a3865ef95e",
+          "pid": "3835f388fdf7",
+          "type": "file",
+          "name": "倪海厦注解伤寒论 自编纯文本 (个人).pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\医典\\倪海厦注解伤寒论 自编纯文本 (个人).pdf",
+          "rel_path": "医典/倪海厦注解伤寒论 自编纯文本 (个人).pdf",
+          "depth": 2,
+          "size": 2714484,
+          "size_text": "2.6 MB",
+          "thumbnail": "assets/thumbnails/18a3865ef95e.png",
+          "thumbnails": [
+            "assets/thumbnails/18a3865ef95e.png",
+            "assets/thumbnails/18a3865ef95e_2.png",
+            "assets/thumbnails/18a3865ef95e_3.png"
+          ]
+        },
+        {
+          "id": "700cd4871329",
+          "pid": "3835f388fdf7",
+          "type": "file",
+          "name": "内照法 （汉）华佗元化撰.pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\医典\\内照法 （汉）华佗元化撰.pdf",
+          "rel_path": "医典/内照法 （汉）华佗元化撰.pdf",
+          "depth": 2,
+          "size": 5998562,
+          "size_text": "5.7 MB",
+          "thumbnail": "assets/thumbnails/700cd4871329.png",
+          "thumbnails": [
+            "assets/thumbnails/700cd4871329.png",
+            "assets/thumbnails/700cd4871329_2.png",
+            "assets/thumbnails/700cd4871329_3.png"
+          ]
+        },
+        {
+          "id": "752b076771c3",
+          "pid": "3835f388fdf7",
+          "type": "file",
+          "name": "内证观察笔记-真图本中医解剖学纲目.pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\医典\\内证观察笔记-真图本中医解剖学纲目.pdf",
+          "rel_path": "医典/内证观察笔记-真图本中医解剖学纲目.pdf",
+          "depth": 2,
+          "size": 40162581,
+          "size_text": "38.3 MB",
+          "thumbnail": "assets/thumbnails/752b076771c3.png",
+          "thumbnails": [
+            "assets/thumbnails/752b076771c3.png",
+            "assets/thumbnails/752b076771c3_2.png",
+            "assets/thumbnails/752b076771c3_3.png"
+          ]
+        },
+        {
+          "id": "f64fbb093898",
+          "pid": "3835f388fdf7",
+          "type": "file",
+          "name": "四圣心源 (黄元御医书精华).pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\医典\\四圣心源 (黄元御医书精华).pdf",
+          "rel_path": "医典/四圣心源 (黄元御医书精华).pdf",
+          "depth": 2,
+          "size": 5347514,
+          "size_text": "5.1 MB",
+          "thumbnail": "assets/thumbnails/f64fbb093898.png",
+          "thumbnails": [
+            "assets/thumbnails/f64fbb093898.png",
+            "assets/thumbnails/f64fbb093898_2.png",
+            "assets/thumbnails/f64fbb093898_3.png"
+          ]
+        },
+        {
+          "id": "ba359f75e106",
+          "pid": "3835f388fdf7",
+          "type": "file",
+          "name": "天回医简 上 (天回醫簡整理組).pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\医典\\天回医简 上 (天回醫簡整理組).pdf",
+          "rel_path": "医典/天回医简 上 (天回醫簡整理組).pdf",
+          "depth": 2,
+          "size": 226960192,
+          "size_text": "216.4 MB",
+          "thumbnail": "assets/thumbnails/ba359f75e106.png",
+          "thumbnails": [
+            "assets/thumbnails/ba359f75e106.png",
+            "assets/thumbnails/ba359f75e106_2.png",
+            "assets/thumbnails/ba359f75e106_3.png"
+          ]
+        },
+        {
+          "id": "c7ada65d2d7d",
+          "pid": "3835f388fdf7",
+          "type": "file",
+          "name": "天回医简 下 (天回醫簡整理組).pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\医典\\天回医简 下 (天回醫簡整理組).pdf",
+          "rel_path": "医典/天回医简 下 (天回醫簡整理組).pdf",
+          "depth": 2,
+          "size": 264857106,
+          "size_text": "252.6 MB",
+          "thumbnail": "assets/thumbnails/c7ada65d2d7d.png",
+          "thumbnails": [
+            "assets/thumbnails/c7ada65d2d7d.png",
+            "assets/thumbnails/c7ada65d2d7d_2.png",
+            "assets/thumbnails/c7ada65d2d7d_3.png"
+          ]
+        },
+        {
+          "id": "2b9464cda537",
+          "pid": "3835f388fdf7",
+          "type": "file",
+          "name": "扁鹊心书 (宋·窦材).epub",
+          "ext": "epub",
+          "category": "ebook",
+          "path": "G:\\医\\医典\\扁鹊心书 (宋·窦材).epub",
+          "rel_path": "医典/扁鹊心书 (宋·窦材).epub",
+          "depth": 2,
+          "size": 1698785,
+          "size_text": "1.6 MB",
+          "thumbnail": "assets/thumbnails/2b9464cda537.png",
+          "thumbnails": [
+            "assets/thumbnails/2b9464cda537.png"
+          ]
+        },
+        {
+          "id": "adfb2f35f6d4",
+          "pid": "3835f388fdf7",
+          "type": "file",
+          "name": "玄隐遗密之九常記 (商.容成子著,三申道長傳).pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\医典\\玄隐遗密之九常記 (商.容成子著,三申道長傳).pdf",
+          "rel_path": "医典/玄隐遗密之九常記 (商.容成子著,三申道長傳).pdf",
+          "depth": 2,
+          "size": 73192548,
+          "size_text": "69.8 MB",
+          "thumbnail": "assets/thumbnails/adfb2f35f6d4.png",
+          "thumbnails": [
+            "assets/thumbnails/adfb2f35f6d4.png",
+            "assets/thumbnails/adfb2f35f6d4_2.png",
+            "assets/thumbnails/adfb2f35f6d4_3.png"
+          ]
+        },
+        {
+          "id": "7528ed2bc2f3",
+          "pid": "3835f388fdf7",
+          "type": "file",
+          "name": "玄隐遗密之九眞要 (商.容成子著,三申道長傳).pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\医典\\玄隐遗密之九眞要 (商.容成子著,三申道長傳).pdf",
+          "rel_path": "医典/玄隐遗密之九眞要 (商.容成子著,三申道長傳).pdf",
+          "depth": 2,
+          "size": 63775334,
+          "size_text": "60.8 MB",
+          "thumbnail": "assets/thumbnails/7528ed2bc2f3.png",
+          "thumbnails": [
+            "assets/thumbnails/7528ed2bc2f3.png",
+            "assets/thumbnails/7528ed2bc2f3_2.png",
+            "assets/thumbnails/7528ed2bc2f3_3.png"
+          ]
+        },
+        {
+          "id": "ffb96c5ce04f",
+          "pid": "3835f388fdf7",
+          "type": "file",
+          "name": "玄隐遗密之黃帝內經  (下) (商.容成子著, 三申道長傳) .pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\医典\\玄隐遗密之黃帝內經  (下) (商.容成子著, 三申道長傳) .pdf",
+          "rel_path": "医典/玄隐遗密之黃帝內經  (下) (商.容成子著, 三申道長傳) .pdf",
+          "depth": 2,
+          "size": 69232585,
+          "size_text": "66.0 MB",
+          "thumbnail": "assets/thumbnails/ffb96c5ce04f.png",
+          "thumbnails": [
+            "assets/thumbnails/ffb96c5ce04f.png",
+            "assets/thumbnails/ffb96c5ce04f_2.png",
+            "assets/thumbnails/ffb96c5ce04f_3.png"
+          ]
+        },
+        {
+          "id": "c8fbae4e285a",
+          "pid": "3835f388fdf7",
+          "type": "file",
+          "name": "玄隐遗密之黃帝內經 （上） (商.容成子著, 三申道長傳) .pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\医典\\玄隐遗密之黃帝內經 （上） (商.容成子著, 三申道長傳) .pdf",
+          "rel_path": "医典/玄隐遗密之黃帝內經 （上） (商.容成子著, 三申道長傳) .pdf",
+          "depth": 2,
+          "size": 82841451,
+          "size_text": "79.0 MB",
+          "thumbnail": "assets/thumbnails/c8fbae4e285a.png",
+          "thumbnails": [
+            "assets/thumbnails/c8fbae4e285a.png",
+            "assets/thumbnails/c8fbae4e285a_2.png",
+            "assets/thumbnails/c8fbae4e285a_3.png"
+          ]
+        },
+        {
+          "id": "d69980b9cbde",
+          "pid": "3835f388fdf7",
+          "type": "file",
+          "name": "玄隐遗秘之陰陽大論-龜書 (商.容成子著,三申道長傳).pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\医典\\玄隐遗秘之陰陽大論-龜書 (商.容成子著,三申道長傳).pdf",
+          "rel_path": "医典/玄隐遗秘之陰陽大論-龜書 (商.容成子著,三申道長傳).pdf",
+          "depth": 2,
+          "size": 48477473,
+          "size_text": "46.2 MB",
+          "thumbnail": "assets/thumbnails/d69980b9cbde.png",
+          "thumbnails": [
+            "assets/thumbnails/d69980b9cbde.png",
+            "assets/thumbnails/d69980b9cbde_2.png",
+            "assets/thumbnails/d69980b9cbde_3.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "49adf029f401",
+      "pid": "",
+      "type": "folder",
+      "name": "医案",
+      "path": "G:\\医\\医案",
+      "rel_path": "医案",
+      "depth": 1,
+      "children": [
+        {
+          "id": "e3bed86a7923",
+          "pid": "49adf029f401",
+          "type": "file",
+          "name": "专科专病名医临证经验丛书·风湿病 (陶晓华主编).pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\医案\\专科专病名医临证经验丛书·风湿病 (陶晓华主编).pdf",
+          "rel_path": "医案/专科专病名医临证经验丛书·风湿病 (陶晓华主编).pdf",
+          "depth": 2,
+          "size": 7471186,
+          "size_text": "7.1 MB",
+          "thumbnail": "assets/thumbnails/e3bed86a7923.png",
+          "thumbnails": [
+            "assets/thumbnails/e3bed86a7923.png",
+            "assets/thumbnails/e3bed86a7923_2.png",
+            "assets/thumbnails/e3bed86a7923_3.png"
+          ]
+        },
+        {
+          "id": "029c79f69b31",
+          "pid": "49adf029f401",
+          "type": "file",
+          "name": "李可老中医急危重症疑难病经验专辑 (李可) .pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\医案\\李可老中医急危重症疑难病经验专辑 (李可) .pdf",
+          "rel_path": "医案/李可老中医急危重症疑难病经验专辑 (李可) .pdf",
+          "depth": 2,
+          "size": 7856399,
+          "size_text": "7.5 MB",
+          "thumbnail": "assets/thumbnails/029c79f69b31.png",
+          "thumbnails": [
+            "assets/thumbnails/029c79f69b31.png",
+            "assets/thumbnails/029c79f69b31_2.png",
+            "assets/thumbnails/029c79f69b31_3.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ba8cee0ab81f",
+      "pid": "",
+      "type": "folder",
+      "name": "医理",
+      "path": "G:\\医\\医理",
+      "rel_path": "医理",
+      "depth": 1,
+      "children": [
+        {
+          "id": "6b7eac8d8d0c",
+          "pid": "ba8cee0ab81f",
+          "type": "file",
+          "name": "中医基础理论 五运六气 (任应秋著, 古聖先賢, 中医学习).pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\医理\\中医基础理论 五运六气 (任应秋著, 古聖先賢, 中医学习).pdf",
+          "rel_path": "医理/中医基础理论 五运六气 (任应秋著, 古聖先賢, 中医学习).pdf",
+          "depth": 2,
+          "size": 2000066,
+          "size_text": "1.9 MB",
+          "thumbnail": "assets/thumbnails/6b7eac8d8d0c.png",
+          "thumbnails": [
+            "assets/thumbnails/6b7eac8d8d0c.png",
+            "assets/thumbnails/6b7eac8d8d0c_2.png",
+            "assets/thumbnails/6b7eac8d8d0c_3.png"
+          ]
+        },
+        {
+          "id": "6fa6493d93d7",
+          "pid": "ba8cee0ab81f",
+          "type": "file",
+          "name": "系統學河圖 - 中醫系統根於河圖  (校正版) (彭子益, 古聖先賢, 医古文, 中医学习, 针灸按摩疗法, 中医四部经典, 中医医案 ).pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\医理\\系統學河圖 - 中醫系統根於河圖  (校正版) (彭子益, 古聖先賢, 医古文, 中医学习, 针灸按摩疗法, 中医四部经典, 中医医案 ).pdf",
+          "rel_path": "医理/系統學河圖 - 中醫系統根於河圖  (校正版) (彭子益, 古聖先賢, 医古文, 中医学习, 针灸按摩疗法, 中医四部经典, 中医医案 ).pdf",
+          "depth": 2,
+          "size": 1227690,
+          "size_text": "1.2 MB",
+          "thumbnail": "assets/thumbnails/6fa6493d93d7.png",
+          "thumbnails": [
+            "assets/thumbnails/6fa6493d93d7.png",
+            "assets/thumbnails/6fa6493d93d7_2.png",
+            "assets/thumbnails/6fa6493d93d7_3.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a89e958a48fd",
+      "pid": "",
+      "type": "folder",
+      "name": "本草方剂",
+      "path": "G:\\医\\本草方剂",
+      "rel_path": "本草方剂",
+      "depth": 1,
+      "children": [
+        {
+          "id": "fb3745f56c62",
+          "pid": "a89e958a48fd",
+          "type": "file",
+          "name": "医林指月 扁鹊心书神方 (（清）王琦辑).pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\本草方剂\\医林指月 扁鹊心书神方 (（清）王琦辑).pdf",
+          "rel_path": "本草方剂/医林指月 扁鹊心书神方 (（清）王琦辑).pdf",
+          "depth": 2,
+          "size": 16715406,
+          "size_text": "15.9 MB",
+          "thumbnail": "assets/thumbnails/fb3745f56c62.png",
+          "thumbnails": [
+            "assets/thumbnails/fb3745f56c62.png",
+            "assets/thumbnails/fb3745f56c62_2.png",
+            "assets/thumbnails/fb3745f56c62_3.png"
+          ]
+        },
+        {
+          "id": "d12dbe43437b",
+          "pid": "a89e958a48fd",
+          "type": "file",
+          "name": "医林改错 (（清）王清任著).pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\本草方剂\\医林改错 (（清）王清任著).pdf",
+          "rel_path": "本草方剂/医林改错 (（清）王清任著).pdf",
+          "depth": 2,
+          "size": 4025104,
+          "size_text": "3.8 MB",
+          "thumbnail": "assets/thumbnails/d12dbe43437b.png",
+          "thumbnails": [
+            "assets/thumbnails/d12dbe43437b.png",
+            "assets/thumbnails/d12dbe43437b_2.png",
+            "assets/thumbnails/d12dbe43437b_3.png"
+          ]
+        },
+        {
+          "id": "3579afd221ea",
+          "pid": "a89e958a48fd",
+          "type": "file",
+          "name": "尹伊汤液经 全1册 (杨绍伊编) .pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\本草方剂\\尹伊汤液经 全1册 (杨绍伊编) .pdf",
+          "rel_path": "本草方剂/尹伊汤液经 全1册 (杨绍伊编) .pdf",
+          "depth": 2,
+          "size": 93613910,
+          "size_text": "89.3 MB",
+          "thumbnail": "assets/thumbnails/3579afd221ea.png",
+          "thumbnails": [
+            "assets/thumbnails/3579afd221ea.png",
+            "assets/thumbnails/3579afd221ea_2.png",
+            "assets/thumbnails/3579afd221ea_3.png"
+          ]
+        },
+        {
+          "id": "97bd08b6f2a0",
+          "pid": "a89e958a48fd",
+          "type": "file",
+          "name": "张锡纯活用经方论 (中医师承学堂) (吕志杰).epub",
+          "ext": "epub",
+          "category": "ebook",
+          "path": "G:\\医\\本草方剂\\张锡纯活用经方论 (中医师承学堂) (吕志杰).epub",
+          "rel_path": "本草方剂/张锡纯活用经方论 (中医师承学堂) (吕志杰).epub",
+          "depth": 2,
+          "size": 850185,
+          "size_text": "830.3 KB",
+          "thumbnail": "assets/thumbnails/97bd08b6f2a0.png",
+          "thumbnails": [
+            "assets/thumbnails/97bd08b6f2a0.png"
+          ]
+        },
+        {
+          "id": "74cca2f8d37f",
+          "pid": "a89e958a48fd",
+          "type": "file",
+          "name": "湿疹百家百方 (宋坪).epub",
+          "ext": "epub",
+          "category": "ebook",
+          "path": "G:\\医\\本草方剂\\湿疹百家百方 (宋坪).epub",
+          "rel_path": "本草方剂/湿疹百家百方 (宋坪).epub",
+          "depth": 2,
+          "size": 745273,
+          "size_text": "727.8 KB",
+          "thumbnail": "assets/thumbnails/74cca2f8d37f.png",
+          "thumbnails": [
+            "assets/thumbnails/74cca2f8d37f.png"
+          ]
+        },
+        {
+          "id": "dba34bcc1f48",
+          "pid": "a89e958a48fd",
+          "type": "file",
+          "name": "米晶子-济世良方（张至顺）.pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\本草方剂\\米晶子-济世良方（张至顺）.pdf",
+          "rel_path": "本草方剂/米晶子-济世良方（张至顺）.pdf",
+          "depth": 2,
+          "size": 34288823,
+          "size_text": "32.7 MB",
+          "thumbnail": "assets/thumbnails/dba34bcc1f48.png",
+          "thumbnails": [
+            "assets/thumbnails/dba34bcc1f48.png",
+            "assets/thumbnails/dba34bcc1f48_2.png",
+            "assets/thumbnails/dba34bcc1f48_3.png"
+          ]
+        },
+        {
+          "id": "1bd94ac38ee9",
+          "pid": "a89e958a48fd",
+          "type": "file",
+          "name": "米晶子济世良方 (米晶子编著).pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\本草方剂\\米晶子济世良方 (米晶子编著).pdf",
+          "rel_path": "本草方剂/米晶子济世良方 (米晶子编著).pdf",
+          "depth": 2,
+          "size": 34288823,
+          "size_text": "32.7 MB",
+          "thumbnail": "assets/thumbnails/1bd94ac38ee9.png",
+          "thumbnails": [
+            "assets/thumbnails/1bd94ac38ee9.png",
+            "assets/thumbnails/1bd94ac38ee9_2.png",
+            "assets/thumbnails/1bd94ac38ee9_3.png"
+          ]
+        },
+        {
+          "id": "2b8faf0c4f47",
+          "pid": "a89e958a48fd",
+          "type": "file",
+          "name": "血证论 (清·唐容川).pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\本草方剂\\血证论 (清·唐容川).pdf",
+          "rel_path": "本草方剂/血证论 (清·唐容川).pdf",
+          "depth": 2,
+          "size": 7055668,
+          "size_text": "6.7 MB",
+          "thumbnail": "assets/thumbnails/2b8faf0c4f47.png",
+          "thumbnails": [
+            "assets/thumbnails/2b8faf0c4f47.png",
+            "assets/thumbnails/2b8faf0c4f47_2.png",
+            "assets/thumbnails/2b8faf0c4f47_3.png"
+          ]
+        },
+        {
+          "id": "e91dae8a8640",
+          "pid": "a89e958a48fd",
+          "type": "file",
+          "name": "长沙药解 (清·黄元御).pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\本草方剂\\长沙药解 (清·黄元御).pdf",
+          "rel_path": "本草方剂/长沙药解 (清·黄元御).pdf",
+          "depth": 2,
+          "size": 1817771,
+          "size_text": "1.7 MB",
+          "thumbnail": "assets/thumbnails/e91dae8a8640.png",
+          "thumbnails": [
+            "assets/thumbnails/e91dae8a8640.png",
+            "assets/thumbnails/e91dae8a8640_2.png",
+            "assets/thumbnails/e91dae8a8640_3.png"
+          ]
+        },
+        {
+          "id": "bd04290100e9",
+          "pid": "a89e958a48fd",
+          "type": "file",
+          "name": "陈修园先生医书七十二种 本草经百种录 食物秘书 本经便读 名医别录 局方发挥 医壘元戎 医法心传 古今医论 剌疔捷訣 (（清）陈念祖撰).pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\本草方剂\\陈修园先生医书七十二种 本草经百种录 食物秘书 本经便读 名医别录 局方发挥 医壘元戎 医法心传 古今医论 剌疔捷訣 (（清）陈念祖撰).pdf",
+          "rel_path": "本草方剂/陈修园先生医书七十二种 本草经百种录 食物秘书 本经便读 名医别录 局方发挥 医壘元戎 医法心传 古今医论 剌疔捷訣 (（清）陈念祖撰).pdf",
+          "depth": 2,
+          "size": 30721466,
+          "size_text": "29.3 MB",
+          "thumbnail": "assets/thumbnails/bd04290100e9.png",
+          "thumbnails": [
+            "assets/thumbnails/bd04290100e9.png",
+            "assets/thumbnails/bd04290100e9_2.png",
+            "assets/thumbnails/bd04290100e9_3.png"
+          ]
+        },
+        {
+          "id": "a2bb6780731c",
+          "pid": "a89e958a48fd",
+          "type": "file",
+          "name": "陈修园医学全书 (陈修园).pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\本草方剂\\陈修园医学全书 (陈修园).pdf",
+          "rel_path": "本草方剂/陈修园医学全书 (陈修园).pdf",
+          "depth": 2,
+          "size": 41669687,
+          "size_text": "39.7 MB",
+          "thumbnail": "assets/thumbnails/a2bb6780731c.png",
+          "thumbnails": [
+            "assets/thumbnails/a2bb6780731c.png",
+            "assets/thumbnails/a2bb6780731c_2.png",
+            "assets/thumbnails/a2bb6780731c_3.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6fe49f2898fb",
+      "pid": "",
+      "type": "folder",
+      "name": "祝由",
+      "path": "G:\\医\\祝由",
+      "rel_path": "祝由",
+      "depth": 1,
+      "children": [
+        {
+          "id": "578b8bd6b68f",
+          "pid": "6fe49f2898fb",
+          "type": "file",
+          "name": "《轩辕碑记医学祝由十三科》.pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\祝由\\《轩辕碑记医学祝由十三科》.pdf",
+          "rel_path": "祝由/《轩辕碑记医学祝由十三科》.pdf",
+          "depth": 2,
+          "size": 16036942,
+          "size_text": "15.3 MB",
+          "thumbnail": "assets/thumbnails/578b8bd6b68f.png",
+          "thumbnails": [
+            "assets/thumbnails/578b8bd6b68f.png",
+            "assets/thumbnails/578b8bd6b68f_2.png",
+            "assets/thumbnails/578b8bd6b68f_3.png"
+          ]
+        },
+        {
+          "id": "a694ba4e3726",
+          "pid": "6fe49f2898fb",
+          "type": "file",
+          "name": "南极天华宝箓祝由科.pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\祝由\\南极天华宝箓祝由科.pdf",
+          "rel_path": "祝由/南极天华宝箓祝由科.pdf",
+          "depth": 2,
+          "size": 30710642,
+          "size_text": "29.3 MB",
+          "thumbnail": "assets/thumbnails/a694ba4e3726.png",
+          "thumbnails": [
+            "assets/thumbnails/a694ba4e3726.png",
+            "assets/thumbnails/a694ba4e3726_2.png",
+            "assets/thumbnails/a694ba4e3726_3.png"
+          ]
+        },
+        {
+          "id": "8bc1ef82dc6e",
+          "pid": "6fe49f2898fb",
+          "type": "file",
+          "name": "天医祝由科.pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\祝由\\天医祝由科.pdf",
+          "rel_path": "祝由/天医祝由科.pdf",
+          "depth": 2,
+          "size": 115354059,
+          "size_text": "110.0 MB",
+          "thumbnail": "assets/thumbnails/8bc1ef82dc6e.png",
+          "thumbnails": [
+            "assets/thumbnails/8bc1ef82dc6e.png",
+            "assets/thumbnails/8bc1ef82dc6e_2.png",
+            "assets/thumbnails/8bc1ef82dc6e_3.png"
+          ]
+        },
+        {
+          "id": "d7dae68658c2",
+          "pid": "6fe49f2898fb",
+          "type": "file",
+          "name": "天医门祝由术修炼秘典.pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\祝由\\天医门祝由术修炼秘典.pdf",
+          "rel_path": "祝由/天医门祝由术修炼秘典.pdf",
+          "depth": 2,
+          "size": 5287210,
+          "size_text": "5.0 MB",
+          "thumbnail": "assets/thumbnails/d7dae68658c2.png",
+          "thumbnails": [
+            "assets/thumbnails/d7dae68658c2.png",
+            "assets/thumbnails/d7dae68658c2_2.png",
+            "assets/thumbnails/d7dae68658c2_3.png"
+          ]
+        },
+        {
+          "id": "11df06f7cfd1",
+          "pid": "6fe49f2898fb",
+          "type": "file",
+          "name": "天医门符咒密法.pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\祝由\\天医门符咒密法.pdf",
+          "rel_path": "祝由/天医门符咒密法.pdf",
+          "depth": 2,
+          "size": 9128071,
+          "size_text": "8.7 MB",
+          "thumbnail": "assets/thumbnails/11df06f7cfd1.png",
+          "thumbnails": [
+            "assets/thumbnails/11df06f7cfd1.png",
+            "assets/thumbnails/11df06f7cfd1_2.png",
+            "assets/thumbnails/11df06f7cfd1_3.png"
+          ]
+        },
+        {
+          "id": "f76996f42145",
+          "pid": "6fe49f2898fb",
+          "type": "file",
+          "name": "天醫祝繇科流傳奧旨.pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\祝由\\天醫祝繇科流傳奧旨.pdf",
+          "rel_path": "祝由/天醫祝繇科流傳奧旨.pdf",
+          "depth": 2,
+          "size": 15481182,
+          "size_text": "14.8 MB",
+          "thumbnail": "assets/thumbnails/f76996f42145.png",
+          "thumbnails": [
+            "assets/thumbnails/f76996f42145.png",
+            "assets/thumbnails/f76996f42145_2.png",
+            "assets/thumbnails/f76996f42145_3.png"
+          ]
+        },
+        {
+          "id": "4f95195db26e",
+          "pid": "6fe49f2898fb",
+          "type": "file",
+          "name": "李氏家藏道医神指术.pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\祝由\\李氏家藏道医神指术.pdf",
+          "rel_path": "祝由/李氏家藏道医神指术.pdf",
+          "depth": 2,
+          "size": 2306162,
+          "size_text": "2.2 MB",
+          "thumbnail": "assets/thumbnails/4f95195db26e.png",
+          "thumbnails": [
+            "assets/thumbnails/4f95195db26e.png",
+            "assets/thumbnails/4f95195db26e_2.png",
+            "assets/thumbnails/4f95195db26e_3.png"
+          ]
+        },
+        {
+          "id": "27195bfc63db",
+          "pid": "6fe49f2898fb",
+          "type": "file",
+          "name": "梅山真传道医秘本86页电子版.pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\祝由\\梅山真传道医秘本86页电子版.pdf",
+          "rel_path": "祝由/梅山真传道医秘本86页电子版.pdf",
+          "depth": 2,
+          "size": 29143655,
+          "size_text": "27.8 MB",
+          "thumbnail": "assets/thumbnails/27195bfc63db.png",
+          "thumbnails": [
+            "assets/thumbnails/27195bfc63db.png",
+            "assets/thumbnails/27195bfc63db_2.png",
+            "assets/thumbnails/27195bfc63db_3.png"
+          ]
+        },
+        {
+          "id": "fc5308bf7810",
+          "pid": "6fe49f2898fb",
+          "type": "file",
+          "name": "法病书.选全图注.刘思孔.民国三年钞本.1914年.pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\祝由\\法病书.选全图注.刘思孔.民国三年钞本.1914年.pdf",
+          "rel_path": "祝由/法病书.选全图注.刘思孔.民国三年钞本.1914年.pdf",
+          "depth": 2,
+          "size": 27864885,
+          "size_text": "26.6 MB",
+          "thumbnail": "assets/thumbnails/fc5308bf7810.png",
+          "thumbnails": [
+            "assets/thumbnails/fc5308bf7810.png",
+            "assets/thumbnails/fc5308bf7810_2.png",
+            "assets/thumbnails/fc5308bf7810_3.png"
+          ]
+        },
+        {
+          "id": "ed96ea1d4487",
+          "pid": "6fe49f2898fb",
+          "type": "file",
+          "name": "祝由十三科_癸卯年.pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\祝由\\祝由十三科_癸卯年.pdf",
+          "rel_path": "祝由/祝由十三科_癸卯年.pdf",
+          "depth": 2,
+          "size": 37700584,
+          "size_text": "36.0 MB",
+          "thumbnail": "assets/thumbnails/ed96ea1d4487.png",
+          "thumbnails": [
+            "assets/thumbnails/ed96ea1d4487.png",
+            "assets/thumbnails/ed96ea1d4487_2.png",
+            "assets/thumbnails/ed96ea1d4487_3.png"
+          ]
+        },
+        {
+          "id": "bf68400b1b28",
+          "pid": "6fe49f2898fb",
+          "type": "file",
+          "name": "祝由抄本 百事符 1900.pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\祝由\\祝由抄本 百事符 1900.pdf",
+          "rel_path": "祝由/祝由抄本 百事符 1900.pdf",
+          "depth": 2,
+          "size": 27759512,
+          "size_text": "26.5 MB",
+          "thumbnail": "assets/thumbnails/bf68400b1b28.png",
+          "thumbnails": [
+            "assets/thumbnails/bf68400b1b28.png",
+            "assets/thumbnails/bf68400b1b28_2.png",
+            "assets/thumbnails/bf68400b1b28_3.png"
+          ]
+        },
+        {
+          "id": "7a935dd80d06",
+          "pid": "6fe49f2898fb",
+          "type": "file",
+          "name": "祝由治百病神符.pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\祝由\\祝由治百病神符.pdf",
+          "rel_path": "祝由/祝由治百病神符.pdf",
+          "depth": 2,
+          "size": 8544996,
+          "size_text": "8.1 MB",
+          "thumbnail": "assets/thumbnails/7a935dd80d06.png",
+          "thumbnails": [
+            "assets/thumbnails/7a935dd80d06.png",
+            "assets/thumbnails/7a935dd80d06_2.png",
+            "assets/thumbnails/7a935dd80d06_3.png"
+          ]
+        },
+        {
+          "id": "bf7c515bb431",
+          "pid": "6fe49f2898fb",
+          "type": "file",
+          "name": "祝由科1900.pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\祝由\\祝由科1900.pdf",
+          "rel_path": "祝由/祝由科1900.pdf",
+          "depth": 2,
+          "size": 39983085,
+          "size_text": "38.1 MB",
+          "thumbnail": "assets/thumbnails/bf7c515bb431.png",
+          "thumbnails": [
+            "assets/thumbnails/bf7c515bb431.png",
+            "assets/thumbnails/bf7c515bb431_2.png",
+            "assets/thumbnails/bf7c515bb431_3.png"
+          ]
+        },
+        {
+          "id": "2faa7be155a9",
+          "pid": "6fe49f2898fb",
+          "type": "file",
+          "name": "祝由科_咸丰戊午年1858年.pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\祝由\\祝由科_咸丰戊午年1858年.pdf",
+          "rel_path": "祝由/祝由科_咸丰戊午年1858年.pdf",
+          "depth": 2,
+          "size": 55879603,
+          "size_text": "53.3 MB",
+          "thumbnail": "assets/thumbnails/2faa7be155a9.png",
+          "thumbnails": [
+            "assets/thumbnails/2faa7be155a9.png",
+            "assets/thumbnails/2faa7be155a9_2.png",
+            "assets/thumbnails/2faa7be155a9_3.png"
+          ]
+        },
+        {
+          "id": "9751c2b0cb94",
+          "pid": "6fe49f2898fb",
+          "type": "file",
+          "name": "祝由科十三科.秘诀奇书.乾元亨利贞五册.明末清初钞本.pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\祝由\\祝由科十三科.秘诀奇书.乾元亨利贞五册.明末清初钞本.pdf",
+          "rel_path": "祝由/祝由科十三科.秘诀奇书.乾元亨利贞五册.明末清初钞本.pdf",
+          "depth": 2,
+          "size": 99159614,
+          "size_text": "94.6 MB",
+          "thumbnail": "assets/thumbnails/9751c2b0cb94.png",
+          "thumbnails": [
+            "assets/thumbnails/9751c2b0cb94.png",
+            "assets/thumbnails/9751c2b0cb94_2.png",
+            "assets/thumbnails/9751c2b0cb94_3.png"
+          ]
+        },
+        {
+          "id": "c7c6e3ecd329",
+          "pid": "6fe49f2898fb",
+          "type": "file",
+          "name": "黄帝医用祝由医学禁法篇.pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\祝由\\黄帝医用祝由医学禁法篇.pdf",
+          "rel_path": "祝由/黄帝医用祝由医学禁法篇.pdf",
+          "depth": 2,
+          "size": 45726021,
+          "size_text": "43.6 MB",
+          "thumbnail": "assets/thumbnails/c7c6e3ecd329.png",
+          "thumbnails": [
+            "assets/thumbnails/c7c6e3ecd329.png",
+            "assets/thumbnails/c7c6e3ecd329_2.png",
+            "assets/thumbnails/c7c6e3ecd329_3.png"
+          ]
+        },
+        {
+          "id": "ecdcf148e11b",
+          "pid": "6fe49f2898fb",
+          "type": "file",
+          "name": "黄帝医用祝由术研究.pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\祝由\\黄帝医用祝由术研究.pdf",
+          "rel_path": "祝由/黄帝医用祝由术研究.pdf",
+          "depth": 2,
+          "size": 117543554,
+          "size_text": "112.1 MB",
+          "thumbnail": "assets/thumbnails/ecdcf148e11b.png",
+          "thumbnails": [
+            "assets/thumbnails/ecdcf148e11b.png",
+            "assets/thumbnails/ecdcf148e11b_2.png",
+            "assets/thumbnails/ecdcf148e11b_3.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bd84bddb1dc0",
+      "pid": "",
+      "type": "folder",
+      "name": "诊法",
+      "path": "G:\\医\\诊法",
+      "rel_path": "诊法",
+      "depth": 1,
+      "children": [
+        {
+          "id": "ad47c1d6a90b",
+          "pid": "bd84bddb1dc0",
+          "type": "file",
+          "name": "几种中医简便诊断法.pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\诊法\\几种中医简便诊断法.pdf",
+          "rel_path": "诊法/几种中医简便诊断法.pdf",
+          "depth": 2,
+          "size": 739955,
+          "size_text": "722.6 KB",
+          "thumbnail": "assets/thumbnails/ad47c1d6a90b.png",
+          "thumbnails": [
+            "assets/thumbnails/ad47c1d6a90b.png",
+            "assets/thumbnails/ad47c1d6a90b_2.png",
+            "assets/thumbnails/ad47c1d6a90b_3.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ec2d8f945908",
+      "pid": "",
+      "type": "folder",
+      "name": "针灸",
+      "path": "G:\\医\\针灸",
+      "rel_path": "针灸",
+      "depth": 1,
+      "children": [
+        {
+          "id": "41c2693e745a",
+          "pid": "ec2d8f945908",
+          "type": "file",
+          "name": "刺血医镜.pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\针灸\\刺血医镜.pdf",
+          "rel_path": "针灸/刺血医镜.pdf",
+          "depth": 2,
+          "size": 19193192,
+          "size_text": "18.3 MB",
+          "thumbnail": "assets/thumbnails/41c2693e745a.png",
+          "thumbnails": [
+            "assets/thumbnails/41c2693e745a.png",
+            "assets/thumbnails/41c2693e745a_2.png",
+            "assets/thumbnails/41c2693e745a_3.png"
+          ]
+        },
+        {
+          "id": "d8e470afb133",
+          "pid": "ec2d8f945908",
+          "type": "file",
+          "name": "艾灸养生祛病法.pdf",
+          "ext": "pdf",
+          "category": "pdf",
+          "path": "G:\\医\\针灸\\艾灸养生祛病法.pdf",
+          "rel_path": "针灸/艾灸养生祛病法.pdf",
+          "depth": 2,
+          "size": 3059776,
+          "size_text": "2.9 MB",
+          "thumbnail": "assets/thumbnails/d8e470afb133.png",
+          "thumbnails": [
+            "assets/thumbnails/d8e470afb133.png",
+            "assets/thumbnails/d8e470afb133_2.png",
+            "assets/thumbnails/d8e470afb133_3.png"
+          ]
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "id": "c08609cc5d16",
+      "pid": "d19ea57a7dbc",
+      "type": "file",
+      "name": "明清名医全书大成_唐容川医学全书 (王咪咪等主编).pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\全书\\明清名医全书大成_唐容川医学全书 (王咪咪等主编).pdf",
+      "rel_path": "全书/明清名医全书大成_唐容川医学全书 (王咪咪等主编).pdf",
+      "depth": 2,
+      "size": 30877992,
+      "size_text": "29.4 MB",
+      "thumbnail": "assets/thumbnails/c08609cc5d16.png",
+      "thumbnails": [
+        "assets/thumbnails/c08609cc5d16.png",
+        "assets/thumbnails/c08609cc5d16_2.png",
+        "assets/thumbnails/c08609cc5d16_3.png"
+      ]
+    },
+    {
+      "id": "aa408e9e4feb",
+      "pid": "d19ea57a7dbc",
+      "type": "file",
+      "name": "明清名医全书大成_张璐医学全书 (張民慶等主編).pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\全书\\明清名医全书大成_张璐医学全书 (張民慶等主編).pdf",
+      "rel_path": "全书/明清名医全书大成_张璐医学全书 (張民慶等主編).pdf",
+      "depth": 2,
+      "size": 47327728,
+      "size_text": "45.1 MB",
+      "thumbnail": "assets/thumbnails/aa408e9e4feb.png",
+      "thumbnails": [
+        "assets/thumbnails/aa408e9e4feb.png",
+        "assets/thumbnails/aa408e9e4feb_2.png",
+        "assets/thumbnails/aa408e9e4feb_3.png"
+      ]
+    },
+    {
+      "id": "cec245a0cd45",
+      "pid": "d19ea57a7dbc",
+      "type": "file",
+      "name": "火神之祖-槐轩医学全书 (清·刘止唐  刘子维) .epub",
+      "ext": "epub",
+      "category": "ebook",
+      "path": "G:\\医\\全书\\火神之祖-槐轩医学全书 (清·刘止唐  刘子维) .epub",
+      "rel_path": "全书/火神之祖-槐轩医学全书 (清·刘止唐  刘子维) .epub",
+      "depth": 2,
+      "size": 452317,
+      "size_text": "441.7 KB",
+      "thumbnail": "assets/thumbnails/cec245a0cd45.png",
+      "thumbnails": [
+        "assets/thumbnails/cec245a0cd45.png"
+      ]
+    },
+    {
+      "id": "e927b1155a7e",
+      "pid": "d19ea57a7dbc",
+      "type": "file",
+      "name": "胥山老人王琢崖纂辑医书十二种 医林指月 侣山堂类辩（上卷） 本草崇原（下卷）(徐麟祥述).pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\全书\\胥山老人王琢崖纂辑医书十二种 医林指月 侣山堂类辩（上卷） 本草崇原（下卷）(徐麟祥述).pdf",
+      "rel_path": "全书/胥山老人王琢崖纂辑医书十二种 医林指月 侣山堂类辩（上卷） 本草崇原（下卷）(徐麟祥述).pdf",
+      "depth": 2,
+      "size": 46501579,
+      "size_text": "44.3 MB",
+      "thumbnail": "assets/thumbnails/e927b1155a7e.png",
+      "thumbnails": [
+        "assets/thumbnails/e927b1155a7e.png",
+        "assets/thumbnails/e927b1155a7e_2.png",
+        "assets/thumbnails/e927b1155a7e_3.png"
+      ]
+    },
+    {
+      "id": "c671ce209b0c",
+      "pid": "d19ea57a7dbc",
+      "type": "file",
+      "name": "胥山老人王琢崖纂辑医书十二种 医林指月 侣山堂类辩（下卷） 学古诊则 （一帙、二帙、三帙上） (徐麟祥述).pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\全书\\胥山老人王琢崖纂辑医书十二种 医林指月 侣山堂类辩（下卷） 学古诊则 （一帙、二帙、三帙上） (徐麟祥述).pdf",
+      "rel_path": "全书/胥山老人王琢崖纂辑医书十二种 医林指月 侣山堂类辩（下卷） 学古诊则 （一帙、二帙、三帙上） (徐麟祥述).pdf",
+      "depth": 2,
+      "size": 47881689,
+      "size_text": "45.7 MB",
+      "thumbnail": "assets/thumbnails/c671ce209b0c.png",
+      "thumbnails": [
+        "assets/thumbnails/c671ce209b0c.png",
+        "assets/thumbnails/c671ce209b0c_2.png",
+        "assets/thumbnails/c671ce209b0c_3.png"
+      ]
+    },
+    {
+      "id": "72bfe995828d",
+      "pid": "d19ea57a7dbc",
+      "type": "file",
+      "name": "胥山老人王琢崖纂辑医书十二种 医林指月 医学心法 易氏医按 (徐麟祥述).pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\全书\\胥山老人王琢崖纂辑医书十二种 医林指月 医学心法 易氏医按 (徐麟祥述).pdf",
+      "rel_path": "全书/胥山老人王琢崖纂辑医书十二种 医林指月 医学心法 易氏医按 (徐麟祥述).pdf",
+      "depth": 2,
+      "size": 49617067,
+      "size_text": "47.3 MB",
+      "thumbnail": "assets/thumbnails/72bfe995828d.png",
+      "thumbnails": [
+        "assets/thumbnails/72bfe995828d.png",
+        "assets/thumbnails/72bfe995828d_2.png",
+        "assets/thumbnails/72bfe995828d_3.png"
+      ]
+    },
+    {
+      "id": "a03c23554556",
+      "pid": "d19ea57a7dbc",
+      "type": "file",
+      "name": "胥山老人王琢崖纂辑医书十二种 医林指月 医学真传一卷 质疑录一卷 (徐麟祥述).pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\全书\\胥山老人王琢崖纂辑医书十二种 医林指月 医学真传一卷 质疑录一卷 (徐麟祥述).pdf",
+      "rel_path": "全书/胥山老人王琢崖纂辑医书十二种 医林指月 医学真传一卷 质疑录一卷 (徐麟祥述).pdf",
+      "depth": 2,
+      "size": 51168568,
+      "size_text": "48.8 MB",
+      "thumbnail": "assets/thumbnails/a03c23554556.png",
+      "thumbnails": [
+        "assets/thumbnails/a03c23554556.png",
+        "assets/thumbnails/a03c23554556_2.png",
+        "assets/thumbnails/a03c23554556_3.png"
+      ]
+    },
+    {
+      "id": "970d558a0c38",
+      "pid": "d19ea57a7dbc",
+      "type": "file",
+      "name": "黄元御医书十一种 .pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\全书\\黄元御医书十一种 .pdf",
+      "rel_path": "全书/黄元御医书十一种 .pdf",
+      "depth": 2,
+      "size": 17180769,
+      "size_text": "16.4 MB",
+      "thumbnail": "assets/thumbnails/970d558a0c38.png",
+      "thumbnails": [
+        "assets/thumbnails/970d558a0c38.png",
+        "assets/thumbnails/970d558a0c38_2.png",
+        "assets/thumbnails/970d558a0c38_3.png"
+      ]
+    },
+    {
+      "id": "90924faa1c85",
+      "pid": "dbc8f45aaa3a",
+      "type": "file",
+      "name": "《三申道人传奇》.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\医典\\玄隐遗密\\三申道人的书\\《三申道人传奇》.pdf",
+      "rel_path": "医典/玄隐遗密/三申道人的书/《三申道人传奇》.pdf",
+      "depth": 4,
+      "size": 1189908,
+      "size_text": "1.1 MB",
+      "thumbnail": "assets/thumbnails/90924faa1c85.png",
+      "thumbnails": [
+        "assets/thumbnails/90924faa1c85.png",
+        "assets/thumbnails/90924faa1c85_2.png",
+        "assets/thumbnails/90924faa1c85_3.png"
+      ]
+    },
+    {
+      "id": "5c3f907b2c10",
+      "pid": "dbc8f45aaa3a",
+      "type": "file",
+      "name": "《上古医文》！！.doc",
+      "ext": "doc",
+      "category": "word",
+      "path": "G:\\医\\医典\\玄隐遗密\\三申道人的书\\《上古医文》！！.doc",
+      "rel_path": "医典/玄隐遗密/三申道人的书/《上古医文》！！.doc",
+      "depth": 4,
+      "size": 3645952,
+      "size_text": "3.5 MB",
+      "thumbnail": "assets/thumbnails/5c3f907b2c10.png",
+      "thumbnails": [
+        "assets/thumbnails/5c3f907b2c10.png"
+      ]
+    },
+    {
+      "id": "950131bc12b2",
+      "pid": "dbc8f45aaa3a",
+      "type": "file",
+      "name": "《学师三申道人》【最终版】.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\医典\\玄隐遗密\\三申道人的书\\《学师三申道人》【最终版】.pdf",
+      "rel_path": "医典/玄隐遗密/三申道人的书/《学师三申道人》【最终版】.pdf",
+      "depth": 4,
+      "size": 1461191,
+      "size_text": "1.4 MB",
+      "thumbnail": "assets/thumbnails/950131bc12b2.png",
+      "thumbnails": [
+        "assets/thumbnails/950131bc12b2.png",
+        "assets/thumbnails/950131bc12b2_2.png",
+        "assets/thumbnails/950131bc12b2_3.png"
+      ]
+    },
+    {
+      "id": "054bcc47cc8e",
+      "pid": "dbc8f45aaa3a",
+      "type": "file",
+      "name": "三申道人讲坐—平民医学基础篇.doc",
+      "ext": "doc",
+      "category": "word",
+      "path": "G:\\医\\医典\\玄隐遗密\\三申道人的书\\三申道人讲坐—平民医学基础篇.doc",
+      "rel_path": "医典/玄隐遗密/三申道人的书/三申道人讲坐—平民医学基础篇.doc",
+      "depth": 4,
+      "size": 493830,
+      "size_text": "482.3 KB",
+      "thumbnail": "assets/thumbnails/054bcc47cc8e.png",
+      "thumbnails": [
+        "assets/thumbnails/054bcc47cc8e.png"
+      ]
+    },
+    {
+      "id": "5b3aa6229e39",
+      "pid": "dbc8f45aaa3a",
+      "type": "file",
+      "name": "三申道人讲座—平民医学基础篇.doc",
+      "ext": "doc",
+      "category": "word",
+      "path": "G:\\医\\医典\\玄隐遗密\\三申道人的书\\三申道人讲座—平民医学基础篇.doc",
+      "rel_path": "医典/玄隐遗密/三申道人的书/三申道人讲座—平民医学基础篇.doc",
+      "depth": 4,
+      "size": 509440,
+      "size_text": "497.5 KB",
+      "thumbnail": "assets/thumbnails/5b3aa6229e39.png",
+      "thumbnails": [
+        "assets/thumbnails/5b3aa6229e39.png"
+      ]
+    },
+    {
+      "id": "02e4cb0dd3a0",
+      "pid": "dbc8f45aaa3a",
+      "type": "file",
+      "name": "九常纪 简体版.doc",
+      "ext": "doc",
+      "category": "word",
+      "path": "G:\\医\\医典\\玄隐遗密\\三申道人的书\\九常纪 简体版.doc",
+      "rel_path": "医典/玄隐遗密/三申道人的书/九常纪 简体版.doc",
+      "depth": 4,
+      "size": 366592,
+      "size_text": "358.0 KB",
+      "thumbnail": "assets/thumbnails/02e4cb0dd3a0.png",
+      "thumbnails": [
+        "assets/thumbnails/02e4cb0dd3a0.png"
+      ]
+    },
+    {
+      "id": "8872010eb37c",
+      "pid": "dbc8f45aaa3a",
+      "type": "file",
+      "name": "九真要--简体版.doc",
+      "ext": "doc",
+      "category": "word",
+      "path": "G:\\医\\医典\\玄隐遗密\\三申道人的书\\九真要--简体版.doc",
+      "rel_path": "医典/玄隐遗密/三申道人的书/九真要--简体版.doc",
+      "depth": 4,
+      "size": 209920,
+      "size_text": "205.0 KB",
+      "thumbnail": "assets/thumbnails/8872010eb37c.png",
+      "thumbnails": [
+        "assets/thumbnails/8872010eb37c.png"
+      ]
+    },
+    {
+      "id": "35783ffdec1a",
+      "pid": "dbc8f45aaa3a",
+      "type": "file",
+      "name": "易与医.doc",
+      "ext": "doc",
+      "category": "word",
+      "path": "G:\\医\\医典\\玄隐遗密\\三申道人的书\\易与医.doc",
+      "rel_path": "医典/玄隐遗密/三申道人的书/易与医.doc",
+      "depth": 4,
+      "size": 173056,
+      "size_text": "169.0 KB",
+      "thumbnail": "assets/thumbnails/35783ffdec1a.png",
+      "thumbnails": [
+        "assets/thumbnails/35783ffdec1a.png"
+      ]
+    },
+    {
+      "id": "7bcc8da1a36b",
+      "pid": "dbc8f45aaa3a",
+      "type": "file",
+      "name": "汉字的学问.doc",
+      "ext": "doc",
+      "category": "word",
+      "path": "G:\\医\\医典\\玄隐遗密\\三申道人的书\\汉字的学问.doc",
+      "rel_path": "医典/玄隐遗密/三申道人的书/汉字的学问.doc",
+      "depth": 4,
+      "size": 517632,
+      "size_text": "505.5 KB",
+      "thumbnail": "assets/thumbnails/7bcc8da1a36b.png",
+      "thumbnails": [
+        "assets/thumbnails/7bcc8da1a36b.png"
+      ]
+    },
+    {
+      "id": "8ea2e33d1b01",
+      "pid": "dbc8f45aaa3a",
+      "type": "file",
+      "name": "阴阳大论 龟书（简体版）.doc",
+      "ext": "doc",
+      "category": "word",
+      "path": "G:\\医\\医典\\玄隐遗密\\三申道人的书\\阴阳大论 龟书（简体版）.doc",
+      "rel_path": "医典/玄隐遗密/三申道人的书/阴阳大论 龟书（简体版）.doc",
+      "depth": 4,
+      "size": 178688,
+      "size_text": "174.5 KB",
+      "thumbnail": "assets/thumbnails/8ea2e33d1b01.png",
+      "thumbnails": [
+        "assets/thumbnails/8ea2e33d1b01.png"
+      ]
+    },
+    {
+      "id": "ae01e7fc3646",
+      "pid": "dbc8f45aaa3a",
+      "type": "file",
+      "name": "黄帝内经上篇 简体版.doc",
+      "ext": "doc",
+      "category": "word",
+      "path": "G:\\医\\医典\\玄隐遗密\\三申道人的书\\黄帝内经上篇 简体版.doc",
+      "rel_path": "医典/玄隐遗密/三申道人的书/黄帝内经上篇 简体版.doc",
+      "depth": 4,
+      "size": 596992,
+      "size_text": "583.0 KB",
+      "thumbnail": "assets/thumbnails/ae01e7fc3646.png",
+      "thumbnails": [
+        "assets/thumbnails/ae01e7fc3646.png"
+      ]
+    },
+    {
+      "id": "d5a916959025",
+      "pid": "dbc8f45aaa3a",
+      "type": "file",
+      "name": "黄帝内经上篇 繁体版.doc",
+      "ext": "doc",
+      "category": "word",
+      "path": "G:\\医\\医典\\玄隐遗密\\三申道人的书\\黄帝内经上篇 繁体版.doc",
+      "rel_path": "医典/玄隐遗密/三申道人的书/黄帝内经上篇 繁体版.doc",
+      "depth": 4,
+      "size": 548996,
+      "size_text": "536.1 KB",
+      "thumbnail": "assets/thumbnails/d5a916959025.png",
+      "thumbnails": [
+        "assets/thumbnails/d5a916959025.png"
+      ]
+    },
+    {
+      "id": "485e4ff52115",
+      "pid": "dbc8f45aaa3a",
+      "type": "file",
+      "name": "黄帝内经下篇 简体版.doc",
+      "ext": "doc",
+      "category": "word",
+      "path": "G:\\医\\医典\\玄隐遗密\\三申道人的书\\黄帝内经下篇 简体版.doc",
+      "rel_path": "医典/玄隐遗密/三申道人的书/黄帝内经下篇 简体版.doc",
+      "depth": 4,
+      "size": 530944,
+      "size_text": "518.5 KB",
+      "thumbnail": "assets/thumbnails/485e4ff52115.png",
+      "thumbnails": [
+        "assets/thumbnails/485e4ff52115.png"
+      ]
+    },
+    {
+      "id": "cc4692c79348",
+      "pid": "dbc8f45aaa3a",
+      "type": "file",
+      "name": "黄帝内经下篇 繁体版.doc",
+      "ext": "doc",
+      "category": "word",
+      "path": "G:\\医\\医典\\玄隐遗密\\三申道人的书\\黄帝内经下篇 繁体版.doc",
+      "rel_path": "医典/玄隐遗密/三申道人的书/黄帝内经下篇 繁体版.doc",
+      "depth": 4,
+      "size": 541752,
+      "size_text": "529.1 KB",
+      "thumbnail": "assets/thumbnails/cc4692c79348.png",
+      "thumbnails": [
+        "assets/thumbnails/cc4692c79348.png"
+      ]
+    },
+    {
+      "id": "ba2c1e9ea108",
+      "pid": "dbc8f45aaa3a",
+      "type": "file",
+      "name": "龟书三讲.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\医典\\玄隐遗密\\三申道人的书\\龟书三讲.pdf",
+      "rel_path": "医典/玄隐遗密/三申道人的书/龟书三讲.pdf",
+      "depth": 4,
+      "size": 291405,
+      "size_text": "284.6 KB",
+      "thumbnail": "assets/thumbnails/ba2c1e9ea108.png",
+      "thumbnails": [
+        "assets/thumbnails/ba2c1e9ea108.png",
+        "assets/thumbnails/ba2c1e9ea108_2.png",
+        "assets/thumbnails/ba2c1e9ea108_3.png"
+      ]
+    },
+    {
+      "id": "b1575a972c26",
+      "pid": "77b5443dd7cb",
+      "type": "file",
+      "name": "九常記.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\医典\\玄隐遗密\\九常記.pdf",
+      "rel_path": "医典/玄隐遗密/九常記.pdf",
+      "depth": 3,
+      "size": 73192548,
+      "size_text": "69.8 MB",
+      "thumbnail": "assets/thumbnails/b1575a972c26.png",
+      "thumbnails": [
+        "assets/thumbnails/b1575a972c26.png",
+        "assets/thumbnails/b1575a972c26_2.png",
+        "assets/thumbnails/b1575a972c26_3.png"
+      ]
+    },
+    {
+      "id": "1ea00b12b2b8",
+      "pid": "77b5443dd7cb",
+      "type": "file",
+      "name": "九眞要.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\医典\\玄隐遗密\\九眞要.pdf",
+      "rel_path": "医典/玄隐遗密/九眞要.pdf",
+      "depth": 3,
+      "size": 63775334,
+      "size_text": "60.8 MB",
+      "thumbnail": "assets/thumbnails/1ea00b12b2b8.png",
+      "thumbnails": [
+        "assets/thumbnails/1ea00b12b2b8.png",
+        "assets/thumbnails/1ea00b12b2b8_2.png",
+        "assets/thumbnails/1ea00b12b2b8_3.png"
+      ]
+    },
+    {
+      "id": "5a4f99ba7fc9",
+      "pid": "77b5443dd7cb",
+      "type": "file",
+      "name": "玄隐遗秘.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\医典\\玄隐遗密\\玄隐遗秘.pdf",
+      "rel_path": "医典/玄隐遗密/玄隐遗秘.pdf",
+      "depth": 3,
+      "size": 108836153,
+      "size_text": "103.8 MB",
+      "thumbnail": "assets/thumbnails/5a4f99ba7fc9.png",
+      "thumbnails": [
+        "assets/thumbnails/5a4f99ba7fc9.png",
+        "assets/thumbnails/5a4f99ba7fc9_2.png",
+        "assets/thumbnails/5a4f99ba7fc9_3.png"
+      ]
+    },
+    {
+      "id": "bd0789be97ee",
+      "pid": "77b5443dd7cb",
+      "type": "file",
+      "name": "道长传《内经》.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\医典\\玄隐遗密\\道长传《内经》.pdf",
+      "rel_path": "医典/玄隐遗密/道长传《内经》.pdf",
+      "depth": 3,
+      "size": 3000684,
+      "size_text": "2.9 MB",
+      "thumbnail": "assets/thumbnails/bd0789be97ee.png",
+      "thumbnails": [
+        "assets/thumbnails/bd0789be97ee.png",
+        "assets/thumbnails/bd0789be97ee_2.png",
+        "assets/thumbnails/bd0789be97ee_3.png"
+      ]
+    },
+    {
+      "id": "4f7c91a87e08",
+      "pid": "77b5443dd7cb",
+      "type": "file",
+      "name": "阴阳大论（三申） 甲乙 大要旨.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\医典\\玄隐遗密\\阴阳大论（三申） 甲乙 大要旨.pdf",
+      "rel_path": "医典/玄隐遗密/阴阳大论（三申） 甲乙 大要旨.pdf",
+      "depth": 3,
+      "size": 235318,
+      "size_text": "229.8 KB",
+      "thumbnail": "assets/thumbnails/4f7c91a87e08.png",
+      "thumbnails": [
+        "assets/thumbnails/4f7c91a87e08.png",
+        "assets/thumbnails/4f7c91a87e08_2.png",
+        "assets/thumbnails/4f7c91a87e08_3.png"
+      ]
+    },
+    {
+      "id": "c98ad30a4a30",
+      "pid": "77b5443dd7cb",
+      "type": "file",
+      "name": "阴阳大论（三申） 甲甲 阴阳兆.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\医典\\玄隐遗密\\阴阳大论（三申） 甲甲 阴阳兆.pdf",
+      "rel_path": "医典/玄隐遗密/阴阳大论（三申） 甲甲 阴阳兆.pdf",
+      "depth": 3,
+      "size": 374973,
+      "size_text": "366.2 KB",
+      "thumbnail": "assets/thumbnails/c98ad30a4a30.png",
+      "thumbnails": [
+        "assets/thumbnails/c98ad30a4a30.png",
+        "assets/thumbnails/c98ad30a4a30_2.png",
+        "assets/thumbnails/c98ad30a4a30_3.png"
+      ]
+    },
+    {
+      "id": "ae493b3ea587",
+      "pid": "77b5443dd7cb",
+      "type": "file",
+      "name": "陰陽大論 龜書.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\医典\\玄隐遗密\\陰陽大論 龜書.pdf",
+      "rel_path": "医典/玄隐遗密/陰陽大論 龜書.pdf",
+      "depth": 3,
+      "size": 48477473,
+      "size_text": "46.2 MB",
+      "thumbnail": "assets/thumbnails/ae493b3ea587.png",
+      "thumbnails": [
+        "assets/thumbnails/ae493b3ea587.png",
+        "assets/thumbnails/ae493b3ea587_2.png",
+        "assets/thumbnails/ae493b3ea587_3.png"
+      ]
+    },
+    {
+      "id": "324162a890f2",
+      "pid": "77b5443dd7cb",
+      "type": "file",
+      "name": "黃帝內經 上.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\医典\\玄隐遗密\\黃帝內經 上.pdf",
+      "rel_path": "医典/玄隐遗密/黃帝內經 上.pdf",
+      "depth": 3,
+      "size": 82933311,
+      "size_text": "79.1 MB",
+      "thumbnail": "assets/thumbnails/324162a890f2.png",
+      "thumbnails": [
+        "assets/thumbnails/324162a890f2.png",
+        "assets/thumbnails/324162a890f2_2.png",
+        "assets/thumbnails/324162a890f2_3.png"
+      ]
+    },
+    {
+      "id": "568117cfde57",
+      "pid": "77b5443dd7cb",
+      "type": "file",
+      "name": "黃帝內經 下.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\医典\\玄隐遗密\\黃帝內經 下.pdf",
+      "rel_path": "医典/玄隐遗密/黃帝內經 下.pdf",
+      "depth": 3,
+      "size": 69232585,
+      "size_text": "66.0 MB",
+      "thumbnail": "assets/thumbnails/568117cfde57.png",
+      "thumbnails": [
+        "assets/thumbnails/568117cfde57.png",
+        "assets/thumbnails/568117cfde57_2.png",
+        "assets/thumbnails/568117cfde57_3.png"
+      ]
+    },
+    {
+      "id": "539674284d1e",
+      "pid": "3835f388fdf7",
+      "type": "file",
+      "name": "伤寒杂病论·桂林古本 (民间中医经典古籍志愿编撰组).pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\医典\\伤寒杂病论·桂林古本 (民间中医经典古籍志愿编撰组).pdf",
+      "rel_path": "医典/伤寒杂病论·桂林古本 (民间中医经典古籍志愿编撰组).pdf",
+      "depth": 2,
+      "size": 2213229,
+      "size_text": "2.1 MB",
+      "thumbnail": "assets/thumbnails/539674284d1e.png",
+      "thumbnails": [
+        "assets/thumbnails/539674284d1e.png",
+        "assets/thumbnails/539674284d1e_2.png",
+        "assets/thumbnails/539674284d1e_3.png"
+      ]
+    },
+    {
+      "id": "18a3865ef95e",
+      "pid": "3835f388fdf7",
+      "type": "file",
+      "name": "倪海厦注解伤寒论 自编纯文本 (个人).pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\医典\\倪海厦注解伤寒论 自编纯文本 (个人).pdf",
+      "rel_path": "医典/倪海厦注解伤寒论 自编纯文本 (个人).pdf",
+      "depth": 2,
+      "size": 2714484,
+      "size_text": "2.6 MB",
+      "thumbnail": "assets/thumbnails/18a3865ef95e.png",
+      "thumbnails": [
+        "assets/thumbnails/18a3865ef95e.png",
+        "assets/thumbnails/18a3865ef95e_2.png",
+        "assets/thumbnails/18a3865ef95e_3.png"
+      ]
+    },
+    {
+      "id": "700cd4871329",
+      "pid": "3835f388fdf7",
+      "type": "file",
+      "name": "内照法 （汉）华佗元化撰.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\医典\\内照法 （汉）华佗元化撰.pdf",
+      "rel_path": "医典/内照法 （汉）华佗元化撰.pdf",
+      "depth": 2,
+      "size": 5998562,
+      "size_text": "5.7 MB",
+      "thumbnail": "assets/thumbnails/700cd4871329.png",
+      "thumbnails": [
+        "assets/thumbnails/700cd4871329.png",
+        "assets/thumbnails/700cd4871329_2.png",
+        "assets/thumbnails/700cd4871329_3.png"
+      ]
+    },
+    {
+      "id": "752b076771c3",
+      "pid": "3835f388fdf7",
+      "type": "file",
+      "name": "内证观察笔记-真图本中医解剖学纲目.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\医典\\内证观察笔记-真图本中医解剖学纲目.pdf",
+      "rel_path": "医典/内证观察笔记-真图本中医解剖学纲目.pdf",
+      "depth": 2,
+      "size": 40162581,
+      "size_text": "38.3 MB",
+      "thumbnail": "assets/thumbnails/752b076771c3.png",
+      "thumbnails": [
+        "assets/thumbnails/752b076771c3.png",
+        "assets/thumbnails/752b076771c3_2.png",
+        "assets/thumbnails/752b076771c3_3.png"
+      ]
+    },
+    {
+      "id": "f64fbb093898",
+      "pid": "3835f388fdf7",
+      "type": "file",
+      "name": "四圣心源 (黄元御医书精华).pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\医典\\四圣心源 (黄元御医书精华).pdf",
+      "rel_path": "医典/四圣心源 (黄元御医书精华).pdf",
+      "depth": 2,
+      "size": 5347514,
+      "size_text": "5.1 MB",
+      "thumbnail": "assets/thumbnails/f64fbb093898.png",
+      "thumbnails": [
+        "assets/thumbnails/f64fbb093898.png",
+        "assets/thumbnails/f64fbb093898_2.png",
+        "assets/thumbnails/f64fbb093898_3.png"
+      ]
+    },
+    {
+      "id": "ba359f75e106",
+      "pid": "3835f388fdf7",
+      "type": "file",
+      "name": "天回医简 上 (天回醫簡整理組).pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\医典\\天回医简 上 (天回醫簡整理組).pdf",
+      "rel_path": "医典/天回医简 上 (天回醫簡整理組).pdf",
+      "depth": 2,
+      "size": 226960192,
+      "size_text": "216.4 MB",
+      "thumbnail": "assets/thumbnails/ba359f75e106.png",
+      "thumbnails": [
+        "assets/thumbnails/ba359f75e106.png",
+        "assets/thumbnails/ba359f75e106_2.png",
+        "assets/thumbnails/ba359f75e106_3.png"
+      ]
+    },
+    {
+      "id": "c7ada65d2d7d",
+      "pid": "3835f388fdf7",
+      "type": "file",
+      "name": "天回医简 下 (天回醫簡整理組).pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\医典\\天回医简 下 (天回醫簡整理組).pdf",
+      "rel_path": "医典/天回医简 下 (天回醫簡整理組).pdf",
+      "depth": 2,
+      "size": 264857106,
+      "size_text": "252.6 MB",
+      "thumbnail": "assets/thumbnails/c7ada65d2d7d.png",
+      "thumbnails": [
+        "assets/thumbnails/c7ada65d2d7d.png",
+        "assets/thumbnails/c7ada65d2d7d_2.png",
+        "assets/thumbnails/c7ada65d2d7d_3.png"
+      ]
+    },
+    {
+      "id": "2b9464cda537",
+      "pid": "3835f388fdf7",
+      "type": "file",
+      "name": "扁鹊心书 (宋·窦材).epub",
+      "ext": "epub",
+      "category": "ebook",
+      "path": "G:\\医\\医典\\扁鹊心书 (宋·窦材).epub",
+      "rel_path": "医典/扁鹊心书 (宋·窦材).epub",
+      "depth": 2,
+      "size": 1698785,
+      "size_text": "1.6 MB",
+      "thumbnail": "assets/thumbnails/2b9464cda537.png",
+      "thumbnails": [
+        "assets/thumbnails/2b9464cda537.png"
+      ]
+    },
+    {
+      "id": "adfb2f35f6d4",
+      "pid": "3835f388fdf7",
+      "type": "file",
+      "name": "玄隐遗密之九常記 (商.容成子著,三申道長傳).pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\医典\\玄隐遗密之九常記 (商.容成子著,三申道長傳).pdf",
+      "rel_path": "医典/玄隐遗密之九常記 (商.容成子著,三申道長傳).pdf",
+      "depth": 2,
+      "size": 73192548,
+      "size_text": "69.8 MB",
+      "thumbnail": "assets/thumbnails/adfb2f35f6d4.png",
+      "thumbnails": [
+        "assets/thumbnails/adfb2f35f6d4.png",
+        "assets/thumbnails/adfb2f35f6d4_2.png",
+        "assets/thumbnails/adfb2f35f6d4_3.png"
+      ]
+    },
+    {
+      "id": "7528ed2bc2f3",
+      "pid": "3835f388fdf7",
+      "type": "file",
+      "name": "玄隐遗密之九眞要 (商.容成子著,三申道長傳).pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\医典\\玄隐遗密之九眞要 (商.容成子著,三申道長傳).pdf",
+      "rel_path": "医典/玄隐遗密之九眞要 (商.容成子著,三申道長傳).pdf",
+      "depth": 2,
+      "size": 63775334,
+      "size_text": "60.8 MB",
+      "thumbnail": "assets/thumbnails/7528ed2bc2f3.png",
+      "thumbnails": [
+        "assets/thumbnails/7528ed2bc2f3.png",
+        "assets/thumbnails/7528ed2bc2f3_2.png",
+        "assets/thumbnails/7528ed2bc2f3_3.png"
+      ]
+    },
+    {
+      "id": "ffb96c5ce04f",
+      "pid": "3835f388fdf7",
+      "type": "file",
+      "name": "玄隐遗密之黃帝內經  (下) (商.容成子著, 三申道長傳) .pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\医典\\玄隐遗密之黃帝內經  (下) (商.容成子著, 三申道長傳) .pdf",
+      "rel_path": "医典/玄隐遗密之黃帝內經  (下) (商.容成子著, 三申道長傳) .pdf",
+      "depth": 2,
+      "size": 69232585,
+      "size_text": "66.0 MB",
+      "thumbnail": "assets/thumbnails/ffb96c5ce04f.png",
+      "thumbnails": [
+        "assets/thumbnails/ffb96c5ce04f.png",
+        "assets/thumbnails/ffb96c5ce04f_2.png",
+        "assets/thumbnails/ffb96c5ce04f_3.png"
+      ]
+    },
+    {
+      "id": "c8fbae4e285a",
+      "pid": "3835f388fdf7",
+      "type": "file",
+      "name": "玄隐遗密之黃帝內經 （上） (商.容成子著, 三申道長傳) .pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\医典\\玄隐遗密之黃帝內經 （上） (商.容成子著, 三申道長傳) .pdf",
+      "rel_path": "医典/玄隐遗密之黃帝內經 （上） (商.容成子著, 三申道長傳) .pdf",
+      "depth": 2,
+      "size": 82841451,
+      "size_text": "79.0 MB",
+      "thumbnail": "assets/thumbnails/c8fbae4e285a.png",
+      "thumbnails": [
+        "assets/thumbnails/c8fbae4e285a.png",
+        "assets/thumbnails/c8fbae4e285a_2.png",
+        "assets/thumbnails/c8fbae4e285a_3.png"
+      ]
+    },
+    {
+      "id": "d69980b9cbde",
+      "pid": "3835f388fdf7",
+      "type": "file",
+      "name": "玄隐遗秘之陰陽大論-龜書 (商.容成子著,三申道長傳).pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\医典\\玄隐遗秘之陰陽大論-龜書 (商.容成子著,三申道長傳).pdf",
+      "rel_path": "医典/玄隐遗秘之陰陽大論-龜書 (商.容成子著,三申道長傳).pdf",
+      "depth": 2,
+      "size": 48477473,
+      "size_text": "46.2 MB",
+      "thumbnail": "assets/thumbnails/d69980b9cbde.png",
+      "thumbnails": [
+        "assets/thumbnails/d69980b9cbde.png",
+        "assets/thumbnails/d69980b9cbde_2.png",
+        "assets/thumbnails/d69980b9cbde_3.png"
+      ]
+    },
+    {
+      "id": "e3bed86a7923",
+      "pid": "49adf029f401",
+      "type": "file",
+      "name": "专科专病名医临证经验丛书·风湿病 (陶晓华主编).pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\医案\\专科专病名医临证经验丛书·风湿病 (陶晓华主编).pdf",
+      "rel_path": "医案/专科专病名医临证经验丛书·风湿病 (陶晓华主编).pdf",
+      "depth": 2,
+      "size": 7471186,
+      "size_text": "7.1 MB",
+      "thumbnail": "assets/thumbnails/e3bed86a7923.png",
+      "thumbnails": [
+        "assets/thumbnails/e3bed86a7923.png",
+        "assets/thumbnails/e3bed86a7923_2.png",
+        "assets/thumbnails/e3bed86a7923_3.png"
+      ]
+    },
+    {
+      "id": "029c79f69b31",
+      "pid": "49adf029f401",
+      "type": "file",
+      "name": "李可老中医急危重症疑难病经验专辑 (李可) .pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\医案\\李可老中医急危重症疑难病经验专辑 (李可) .pdf",
+      "rel_path": "医案/李可老中医急危重症疑难病经验专辑 (李可) .pdf",
+      "depth": 2,
+      "size": 7856399,
+      "size_text": "7.5 MB",
+      "thumbnail": "assets/thumbnails/029c79f69b31.png",
+      "thumbnails": [
+        "assets/thumbnails/029c79f69b31.png",
+        "assets/thumbnails/029c79f69b31_2.png",
+        "assets/thumbnails/029c79f69b31_3.png"
+      ]
+    },
+    {
+      "id": "6b7eac8d8d0c",
+      "pid": "ba8cee0ab81f",
+      "type": "file",
+      "name": "中医基础理论 五运六气 (任应秋著, 古聖先賢, 中医学习).pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\医理\\中医基础理论 五运六气 (任应秋著, 古聖先賢, 中医学习).pdf",
+      "rel_path": "医理/中医基础理论 五运六气 (任应秋著, 古聖先賢, 中医学习).pdf",
+      "depth": 2,
+      "size": 2000066,
+      "size_text": "1.9 MB",
+      "thumbnail": "assets/thumbnails/6b7eac8d8d0c.png",
+      "thumbnails": [
+        "assets/thumbnails/6b7eac8d8d0c.png",
+        "assets/thumbnails/6b7eac8d8d0c_2.png",
+        "assets/thumbnails/6b7eac8d8d0c_3.png"
+      ]
+    },
+    {
+      "id": "6fa6493d93d7",
+      "pid": "ba8cee0ab81f",
+      "type": "file",
+      "name": "系統學河圖 - 中醫系統根於河圖  (校正版) (彭子益, 古聖先賢, 医古文, 中医学习, 针灸按摩疗法, 中医四部经典, 中医医案 ).pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\医理\\系統學河圖 - 中醫系統根於河圖  (校正版) (彭子益, 古聖先賢, 医古文, 中医学习, 针灸按摩疗法, 中医四部经典, 中医医案 ).pdf",
+      "rel_path": "医理/系統學河圖 - 中醫系統根於河圖  (校正版) (彭子益, 古聖先賢, 医古文, 中医学习, 针灸按摩疗法, 中医四部经典, 中医医案 ).pdf",
+      "depth": 2,
+      "size": 1227690,
+      "size_text": "1.2 MB",
+      "thumbnail": "assets/thumbnails/6fa6493d93d7.png",
+      "thumbnails": [
+        "assets/thumbnails/6fa6493d93d7.png",
+        "assets/thumbnails/6fa6493d93d7_2.png",
+        "assets/thumbnails/6fa6493d93d7_3.png"
+      ]
+    },
+    {
+      "id": "fb3745f56c62",
+      "pid": "a89e958a48fd",
+      "type": "file",
+      "name": "医林指月 扁鹊心书神方 (（清）王琦辑).pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\本草方剂\\医林指月 扁鹊心书神方 (（清）王琦辑).pdf",
+      "rel_path": "本草方剂/医林指月 扁鹊心书神方 (（清）王琦辑).pdf",
+      "depth": 2,
+      "size": 16715406,
+      "size_text": "15.9 MB",
+      "thumbnail": "assets/thumbnails/fb3745f56c62.png",
+      "thumbnails": [
+        "assets/thumbnails/fb3745f56c62.png",
+        "assets/thumbnails/fb3745f56c62_2.png",
+        "assets/thumbnails/fb3745f56c62_3.png"
+      ]
+    },
+    {
+      "id": "d12dbe43437b",
+      "pid": "a89e958a48fd",
+      "type": "file",
+      "name": "医林改错 (（清）王清任著).pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\本草方剂\\医林改错 (（清）王清任著).pdf",
+      "rel_path": "本草方剂/医林改错 (（清）王清任著).pdf",
+      "depth": 2,
+      "size": 4025104,
+      "size_text": "3.8 MB",
+      "thumbnail": "assets/thumbnails/d12dbe43437b.png",
+      "thumbnails": [
+        "assets/thumbnails/d12dbe43437b.png",
+        "assets/thumbnails/d12dbe43437b_2.png",
+        "assets/thumbnails/d12dbe43437b_3.png"
+      ]
+    },
+    {
+      "id": "3579afd221ea",
+      "pid": "a89e958a48fd",
+      "type": "file",
+      "name": "尹伊汤液经 全1册 (杨绍伊编) .pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\本草方剂\\尹伊汤液经 全1册 (杨绍伊编) .pdf",
+      "rel_path": "本草方剂/尹伊汤液经 全1册 (杨绍伊编) .pdf",
+      "depth": 2,
+      "size": 93613910,
+      "size_text": "89.3 MB",
+      "thumbnail": "assets/thumbnails/3579afd221ea.png",
+      "thumbnails": [
+        "assets/thumbnails/3579afd221ea.png",
+        "assets/thumbnails/3579afd221ea_2.png",
+        "assets/thumbnails/3579afd221ea_3.png"
+      ]
+    },
+    {
+      "id": "97bd08b6f2a0",
+      "pid": "a89e958a48fd",
+      "type": "file",
+      "name": "张锡纯活用经方论 (中医师承学堂) (吕志杰).epub",
+      "ext": "epub",
+      "category": "ebook",
+      "path": "G:\\医\\本草方剂\\张锡纯活用经方论 (中医师承学堂) (吕志杰).epub",
+      "rel_path": "本草方剂/张锡纯活用经方论 (中医师承学堂) (吕志杰).epub",
+      "depth": 2,
+      "size": 850185,
+      "size_text": "830.3 KB",
+      "thumbnail": "assets/thumbnails/97bd08b6f2a0.png",
+      "thumbnails": [
+        "assets/thumbnails/97bd08b6f2a0.png"
+      ]
+    },
+    {
+      "id": "74cca2f8d37f",
+      "pid": "a89e958a48fd",
+      "type": "file",
+      "name": "湿疹百家百方 (宋坪).epub",
+      "ext": "epub",
+      "category": "ebook",
+      "path": "G:\\医\\本草方剂\\湿疹百家百方 (宋坪).epub",
+      "rel_path": "本草方剂/湿疹百家百方 (宋坪).epub",
+      "depth": 2,
+      "size": 745273,
+      "size_text": "727.8 KB",
+      "thumbnail": "assets/thumbnails/74cca2f8d37f.png",
+      "thumbnails": [
+        "assets/thumbnails/74cca2f8d37f.png"
+      ]
+    },
+    {
+      "id": "dba34bcc1f48",
+      "pid": "a89e958a48fd",
+      "type": "file",
+      "name": "米晶子-济世良方（张至顺）.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\本草方剂\\米晶子-济世良方（张至顺）.pdf",
+      "rel_path": "本草方剂/米晶子-济世良方（张至顺）.pdf",
+      "depth": 2,
+      "size": 34288823,
+      "size_text": "32.7 MB",
+      "thumbnail": "assets/thumbnails/dba34bcc1f48.png",
+      "thumbnails": [
+        "assets/thumbnails/dba34bcc1f48.png",
+        "assets/thumbnails/dba34bcc1f48_2.png",
+        "assets/thumbnails/dba34bcc1f48_3.png"
+      ]
+    },
+    {
+      "id": "1bd94ac38ee9",
+      "pid": "a89e958a48fd",
+      "type": "file",
+      "name": "米晶子济世良方 (米晶子编著).pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\本草方剂\\米晶子济世良方 (米晶子编著).pdf",
+      "rel_path": "本草方剂/米晶子济世良方 (米晶子编著).pdf",
+      "depth": 2,
+      "size": 34288823,
+      "size_text": "32.7 MB",
+      "thumbnail": "assets/thumbnails/1bd94ac38ee9.png",
+      "thumbnails": [
+        "assets/thumbnails/1bd94ac38ee9.png",
+        "assets/thumbnails/1bd94ac38ee9_2.png",
+        "assets/thumbnails/1bd94ac38ee9_3.png"
+      ]
+    },
+    {
+      "id": "2b8faf0c4f47",
+      "pid": "a89e958a48fd",
+      "type": "file",
+      "name": "血证论 (清·唐容川).pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\本草方剂\\血证论 (清·唐容川).pdf",
+      "rel_path": "本草方剂/血证论 (清·唐容川).pdf",
+      "depth": 2,
+      "size": 7055668,
+      "size_text": "6.7 MB",
+      "thumbnail": "assets/thumbnails/2b8faf0c4f47.png",
+      "thumbnails": [
+        "assets/thumbnails/2b8faf0c4f47.png",
+        "assets/thumbnails/2b8faf0c4f47_2.png",
+        "assets/thumbnails/2b8faf0c4f47_3.png"
+      ]
+    },
+    {
+      "id": "e91dae8a8640",
+      "pid": "a89e958a48fd",
+      "type": "file",
+      "name": "长沙药解 (清·黄元御).pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\本草方剂\\长沙药解 (清·黄元御).pdf",
+      "rel_path": "本草方剂/长沙药解 (清·黄元御).pdf",
+      "depth": 2,
+      "size": 1817771,
+      "size_text": "1.7 MB",
+      "thumbnail": "assets/thumbnails/e91dae8a8640.png",
+      "thumbnails": [
+        "assets/thumbnails/e91dae8a8640.png",
+        "assets/thumbnails/e91dae8a8640_2.png",
+        "assets/thumbnails/e91dae8a8640_3.png"
+      ]
+    },
+    {
+      "id": "bd04290100e9",
+      "pid": "a89e958a48fd",
+      "type": "file",
+      "name": "陈修园先生医书七十二种 本草经百种录 食物秘书 本经便读 名医别录 局方发挥 医壘元戎 医法心传 古今医论 剌疔捷訣 (（清）陈念祖撰).pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\本草方剂\\陈修园先生医书七十二种 本草经百种录 食物秘书 本经便读 名医别录 局方发挥 医壘元戎 医法心传 古今医论 剌疔捷訣 (（清）陈念祖撰).pdf",
+      "rel_path": "本草方剂/陈修园先生医书七十二种 本草经百种录 食物秘书 本经便读 名医别录 局方发挥 医壘元戎 医法心传 古今医论 剌疔捷訣 (（清）陈念祖撰).pdf",
+      "depth": 2,
+      "size": 30721466,
+      "size_text": "29.3 MB",
+      "thumbnail": "assets/thumbnails/bd04290100e9.png",
+      "thumbnails": [
+        "assets/thumbnails/bd04290100e9.png",
+        "assets/thumbnails/bd04290100e9_2.png",
+        "assets/thumbnails/bd04290100e9_3.png"
+      ]
+    },
+    {
+      "id": "a2bb6780731c",
+      "pid": "a89e958a48fd",
+      "type": "file",
+      "name": "陈修园医学全书 (陈修园).pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\本草方剂\\陈修园医学全书 (陈修园).pdf",
+      "rel_path": "本草方剂/陈修园医学全书 (陈修园).pdf",
+      "depth": 2,
+      "size": 41669687,
+      "size_text": "39.7 MB",
+      "thumbnail": "assets/thumbnails/a2bb6780731c.png",
+      "thumbnails": [
+        "assets/thumbnails/a2bb6780731c.png",
+        "assets/thumbnails/a2bb6780731c_2.png",
+        "assets/thumbnails/a2bb6780731c_3.png"
+      ]
+    },
+    {
+      "id": "578b8bd6b68f",
+      "pid": "6fe49f2898fb",
+      "type": "file",
+      "name": "《轩辕碑记医学祝由十三科》.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\祝由\\《轩辕碑记医学祝由十三科》.pdf",
+      "rel_path": "祝由/《轩辕碑记医学祝由十三科》.pdf",
+      "depth": 2,
+      "size": 16036942,
+      "size_text": "15.3 MB",
+      "thumbnail": "assets/thumbnails/578b8bd6b68f.png",
+      "thumbnails": [
+        "assets/thumbnails/578b8bd6b68f.png",
+        "assets/thumbnails/578b8bd6b68f_2.png",
+        "assets/thumbnails/578b8bd6b68f_3.png"
+      ]
+    },
+    {
+      "id": "a694ba4e3726",
+      "pid": "6fe49f2898fb",
+      "type": "file",
+      "name": "南极天华宝箓祝由科.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\祝由\\南极天华宝箓祝由科.pdf",
+      "rel_path": "祝由/南极天华宝箓祝由科.pdf",
+      "depth": 2,
+      "size": 30710642,
+      "size_text": "29.3 MB",
+      "thumbnail": "assets/thumbnails/a694ba4e3726.png",
+      "thumbnails": [
+        "assets/thumbnails/a694ba4e3726.png",
+        "assets/thumbnails/a694ba4e3726_2.png",
+        "assets/thumbnails/a694ba4e3726_3.png"
+      ]
+    },
+    {
+      "id": "8bc1ef82dc6e",
+      "pid": "6fe49f2898fb",
+      "type": "file",
+      "name": "天医祝由科.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\祝由\\天医祝由科.pdf",
+      "rel_path": "祝由/天医祝由科.pdf",
+      "depth": 2,
+      "size": 115354059,
+      "size_text": "110.0 MB",
+      "thumbnail": "assets/thumbnails/8bc1ef82dc6e.png",
+      "thumbnails": [
+        "assets/thumbnails/8bc1ef82dc6e.png",
+        "assets/thumbnails/8bc1ef82dc6e_2.png",
+        "assets/thumbnails/8bc1ef82dc6e_3.png"
+      ]
+    },
+    {
+      "id": "d7dae68658c2",
+      "pid": "6fe49f2898fb",
+      "type": "file",
+      "name": "天医门祝由术修炼秘典.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\祝由\\天医门祝由术修炼秘典.pdf",
+      "rel_path": "祝由/天医门祝由术修炼秘典.pdf",
+      "depth": 2,
+      "size": 5287210,
+      "size_text": "5.0 MB",
+      "thumbnail": "assets/thumbnails/d7dae68658c2.png",
+      "thumbnails": [
+        "assets/thumbnails/d7dae68658c2.png",
+        "assets/thumbnails/d7dae68658c2_2.png",
+        "assets/thumbnails/d7dae68658c2_3.png"
+      ]
+    },
+    {
+      "id": "11df06f7cfd1",
+      "pid": "6fe49f2898fb",
+      "type": "file",
+      "name": "天医门符咒密法.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\祝由\\天医门符咒密法.pdf",
+      "rel_path": "祝由/天医门符咒密法.pdf",
+      "depth": 2,
+      "size": 9128071,
+      "size_text": "8.7 MB",
+      "thumbnail": "assets/thumbnails/11df06f7cfd1.png",
+      "thumbnails": [
+        "assets/thumbnails/11df06f7cfd1.png",
+        "assets/thumbnails/11df06f7cfd1_2.png",
+        "assets/thumbnails/11df06f7cfd1_3.png"
+      ]
+    },
+    {
+      "id": "f76996f42145",
+      "pid": "6fe49f2898fb",
+      "type": "file",
+      "name": "天醫祝繇科流傳奧旨.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\祝由\\天醫祝繇科流傳奧旨.pdf",
+      "rel_path": "祝由/天醫祝繇科流傳奧旨.pdf",
+      "depth": 2,
+      "size": 15481182,
+      "size_text": "14.8 MB",
+      "thumbnail": "assets/thumbnails/f76996f42145.png",
+      "thumbnails": [
+        "assets/thumbnails/f76996f42145.png",
+        "assets/thumbnails/f76996f42145_2.png",
+        "assets/thumbnails/f76996f42145_3.png"
+      ]
+    },
+    {
+      "id": "4f95195db26e",
+      "pid": "6fe49f2898fb",
+      "type": "file",
+      "name": "李氏家藏道医神指术.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\祝由\\李氏家藏道医神指术.pdf",
+      "rel_path": "祝由/李氏家藏道医神指术.pdf",
+      "depth": 2,
+      "size": 2306162,
+      "size_text": "2.2 MB",
+      "thumbnail": "assets/thumbnails/4f95195db26e.png",
+      "thumbnails": [
+        "assets/thumbnails/4f95195db26e.png",
+        "assets/thumbnails/4f95195db26e_2.png",
+        "assets/thumbnails/4f95195db26e_3.png"
+      ]
+    },
+    {
+      "id": "27195bfc63db",
+      "pid": "6fe49f2898fb",
+      "type": "file",
+      "name": "梅山真传道医秘本86页电子版.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\祝由\\梅山真传道医秘本86页电子版.pdf",
+      "rel_path": "祝由/梅山真传道医秘本86页电子版.pdf",
+      "depth": 2,
+      "size": 29143655,
+      "size_text": "27.8 MB",
+      "thumbnail": "assets/thumbnails/27195bfc63db.png",
+      "thumbnails": [
+        "assets/thumbnails/27195bfc63db.png",
+        "assets/thumbnails/27195bfc63db_2.png",
+        "assets/thumbnails/27195bfc63db_3.png"
+      ]
+    },
+    {
+      "id": "fc5308bf7810",
+      "pid": "6fe49f2898fb",
+      "type": "file",
+      "name": "法病书.选全图注.刘思孔.民国三年钞本.1914年.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\祝由\\法病书.选全图注.刘思孔.民国三年钞本.1914年.pdf",
+      "rel_path": "祝由/法病书.选全图注.刘思孔.民国三年钞本.1914年.pdf",
+      "depth": 2,
+      "size": 27864885,
+      "size_text": "26.6 MB",
+      "thumbnail": "assets/thumbnails/fc5308bf7810.png",
+      "thumbnails": [
+        "assets/thumbnails/fc5308bf7810.png",
+        "assets/thumbnails/fc5308bf7810_2.png",
+        "assets/thumbnails/fc5308bf7810_3.png"
+      ]
+    },
+    {
+      "id": "ed96ea1d4487",
+      "pid": "6fe49f2898fb",
+      "type": "file",
+      "name": "祝由十三科_癸卯年.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\祝由\\祝由十三科_癸卯年.pdf",
+      "rel_path": "祝由/祝由十三科_癸卯年.pdf",
+      "depth": 2,
+      "size": 37700584,
+      "size_text": "36.0 MB",
+      "thumbnail": "assets/thumbnails/ed96ea1d4487.png",
+      "thumbnails": [
+        "assets/thumbnails/ed96ea1d4487.png",
+        "assets/thumbnails/ed96ea1d4487_2.png",
+        "assets/thumbnails/ed96ea1d4487_3.png"
+      ]
+    },
+    {
+      "id": "bf68400b1b28",
+      "pid": "6fe49f2898fb",
+      "type": "file",
+      "name": "祝由抄本 百事符 1900.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\祝由\\祝由抄本 百事符 1900.pdf",
+      "rel_path": "祝由/祝由抄本 百事符 1900.pdf",
+      "depth": 2,
+      "size": 27759512,
+      "size_text": "26.5 MB",
+      "thumbnail": "assets/thumbnails/bf68400b1b28.png",
+      "thumbnails": [
+        "assets/thumbnails/bf68400b1b28.png",
+        "assets/thumbnails/bf68400b1b28_2.png",
+        "assets/thumbnails/bf68400b1b28_3.png"
+      ]
+    },
+    {
+      "id": "7a935dd80d06",
+      "pid": "6fe49f2898fb",
+      "type": "file",
+      "name": "祝由治百病神符.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\祝由\\祝由治百病神符.pdf",
+      "rel_path": "祝由/祝由治百病神符.pdf",
+      "depth": 2,
+      "size": 8544996,
+      "size_text": "8.1 MB",
+      "thumbnail": "assets/thumbnails/7a935dd80d06.png",
+      "thumbnails": [
+        "assets/thumbnails/7a935dd80d06.png",
+        "assets/thumbnails/7a935dd80d06_2.png",
+        "assets/thumbnails/7a935dd80d06_3.png"
+      ]
+    },
+    {
+      "id": "bf7c515bb431",
+      "pid": "6fe49f2898fb",
+      "type": "file",
+      "name": "祝由科1900.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\祝由\\祝由科1900.pdf",
+      "rel_path": "祝由/祝由科1900.pdf",
+      "depth": 2,
+      "size": 39983085,
+      "size_text": "38.1 MB",
+      "thumbnail": "assets/thumbnails/bf7c515bb431.png",
+      "thumbnails": [
+        "assets/thumbnails/bf7c515bb431.png",
+        "assets/thumbnails/bf7c515bb431_2.png",
+        "assets/thumbnails/bf7c515bb431_3.png"
+      ]
+    },
+    {
+      "id": "2faa7be155a9",
+      "pid": "6fe49f2898fb",
+      "type": "file",
+      "name": "祝由科_咸丰戊午年1858年.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\祝由\\祝由科_咸丰戊午年1858年.pdf",
+      "rel_path": "祝由/祝由科_咸丰戊午年1858年.pdf",
+      "depth": 2,
+      "size": 55879603,
+      "size_text": "53.3 MB",
+      "thumbnail": "assets/thumbnails/2faa7be155a9.png",
+      "thumbnails": [
+        "assets/thumbnails/2faa7be155a9.png",
+        "assets/thumbnails/2faa7be155a9_2.png",
+        "assets/thumbnails/2faa7be155a9_3.png"
+      ]
+    },
+    {
+      "id": "9751c2b0cb94",
+      "pid": "6fe49f2898fb",
+      "type": "file",
+      "name": "祝由科十三科.秘诀奇书.乾元亨利贞五册.明末清初钞本.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\祝由\\祝由科十三科.秘诀奇书.乾元亨利贞五册.明末清初钞本.pdf",
+      "rel_path": "祝由/祝由科十三科.秘诀奇书.乾元亨利贞五册.明末清初钞本.pdf",
+      "depth": 2,
+      "size": 99159614,
+      "size_text": "94.6 MB",
+      "thumbnail": "assets/thumbnails/9751c2b0cb94.png",
+      "thumbnails": [
+        "assets/thumbnails/9751c2b0cb94.png",
+        "assets/thumbnails/9751c2b0cb94_2.png",
+        "assets/thumbnails/9751c2b0cb94_3.png"
+      ]
+    },
+    {
+      "id": "c7c6e3ecd329",
+      "pid": "6fe49f2898fb",
+      "type": "file",
+      "name": "黄帝医用祝由医学禁法篇.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\祝由\\黄帝医用祝由医学禁法篇.pdf",
+      "rel_path": "祝由/黄帝医用祝由医学禁法篇.pdf",
+      "depth": 2,
+      "size": 45726021,
+      "size_text": "43.6 MB",
+      "thumbnail": "assets/thumbnails/c7c6e3ecd329.png",
+      "thumbnails": [
+        "assets/thumbnails/c7c6e3ecd329.png",
+        "assets/thumbnails/c7c6e3ecd329_2.png",
+        "assets/thumbnails/c7c6e3ecd329_3.png"
+      ]
+    },
+    {
+      "id": "ecdcf148e11b",
+      "pid": "6fe49f2898fb",
+      "type": "file",
+      "name": "黄帝医用祝由术研究.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\祝由\\黄帝医用祝由术研究.pdf",
+      "rel_path": "祝由/黄帝医用祝由术研究.pdf",
+      "depth": 2,
+      "size": 117543554,
+      "size_text": "112.1 MB",
+      "thumbnail": "assets/thumbnails/ecdcf148e11b.png",
+      "thumbnails": [
+        "assets/thumbnails/ecdcf148e11b.png",
+        "assets/thumbnails/ecdcf148e11b_2.png",
+        "assets/thumbnails/ecdcf148e11b_3.png"
+      ]
+    },
+    {
+      "id": "ad47c1d6a90b",
+      "pid": "bd84bddb1dc0",
+      "type": "file",
+      "name": "几种中医简便诊断法.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\诊法\\几种中医简便诊断法.pdf",
+      "rel_path": "诊法/几种中医简便诊断法.pdf",
+      "depth": 2,
+      "size": 739955,
+      "size_text": "722.6 KB",
+      "thumbnail": "assets/thumbnails/ad47c1d6a90b.png",
+      "thumbnails": [
+        "assets/thumbnails/ad47c1d6a90b.png",
+        "assets/thumbnails/ad47c1d6a90b_2.png",
+        "assets/thumbnails/ad47c1d6a90b_3.png"
+      ]
+    },
+    {
+      "id": "41c2693e745a",
+      "pid": "ec2d8f945908",
+      "type": "file",
+      "name": "刺血医镜.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\针灸\\刺血医镜.pdf",
+      "rel_path": "针灸/刺血医镜.pdf",
+      "depth": 2,
+      "size": 19193192,
+      "size_text": "18.3 MB",
+      "thumbnail": "assets/thumbnails/41c2693e745a.png",
+      "thumbnails": [
+        "assets/thumbnails/41c2693e745a.png",
+        "assets/thumbnails/41c2693e745a_2.png",
+        "assets/thumbnails/41c2693e745a_3.png"
+      ]
+    },
+    {
+      "id": "d8e470afb133",
+      "pid": "ec2d8f945908",
+      "type": "file",
+      "name": "艾灸养生祛病法.pdf",
+      "ext": "pdf",
+      "category": "pdf",
+      "path": "G:\\医\\针灸\\艾灸养生祛病法.pdf",
+      "rel_path": "针灸/艾灸养生祛病法.pdf",
+      "depth": 2,
+      "size": 3059776,
+      "size_text": "2.9 MB",
+      "thumbnail": "assets/thumbnails/d8e470afb133.png",
+      "thumbnails": [
+        "assets/thumbnails/d8e470afb133.png",
+        "assets/thumbnails/d8e470afb133_2.png",
+        "assets/thumbnails/d8e470afb133_3.png"
+      ]
+    }
+  ]
+}
