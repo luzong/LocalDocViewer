@@ -11,6 +11,7 @@
     - 文件新增/变动 → 生成缩略图
     - 磁盘已删除文件 → 从缓存清除, 对应缩略图删除
  5. 命令行与 GUI 两种使用模式
+ 6. 历史记录: 扫描后自动保存站点, 下次启动恢复
 
 输出:
   - site/assets/data/data.json
@@ -28,54 +29,44 @@ import traceback
 import threading
 import shutil
 import ctypes
+import configparser
 from pathlib import Path
-from dataclasses import dataclass, field, asdict
+from dataclasses import dataclass
 from typing import Set, Dict, List, Optional, Tuple
 
 
 # ================================================================
 # 应用图标 (多尺寸 icon.ico) 资源路径
-#   - 桌面/资源管理器图标: 由 PyInstaller --icon 嵌入 exe
-#   - 窗口左上角图标:      self.root.iconbitmap(icon_path)
-#   - 任务栏/Alt-Tab 图标: SetCurrentProcessExplicitAppUserModelID (需在 tk.Tk() 前调用)
 # ================================================================
-APP_USER_MODEL_ID = "DocumentScanner.LocalBrowser.v1"  # Win7+ 任务栏分组 ID
-ICON_PATH = Path(__file__).resolve().parent / "icon.ico"
+APP_USER_MODEL_ID = "DocumentScanner.LocalBrowser.v1"
 
 
 def set_app_user_model_id(app_id: str = APP_USER_MODEL_ID) -> None:
-    """在 Windows 上设置进程的 AppUserModelID, 让任务栏/Alt-Tab 显示本应用图标而非默认 Python 图标.
-
-    必须在创建主窗口 (Tk) 之前调用, 否则不生效.
-    """
+    """在 Windows 上设置进程的 AppUserModelID"""
     if sys.platform != "win32":
         return
     try:
         ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(app_id)
     except Exception:
-        # 非 Windows 或 API 不可用, 忽略
         pass
 
 
 def get_icon_path() -> Optional[str]:
-    """返回 icon.ico 的绝对路径字符串, 不存在则返回 None.
-
-    优先使用与 scanner.py 同目录的 icon.ico;
-    若是 PyInstaller 打包后运行, 则解压到 sys._MEIPASS 临时目录查找.
-    """
-    candidates = []
-    if hasattr(sys, "_MEIPASS"):
-        candidates.append(Path(sys._MEIPASS) / "icon.ico")
-    candidates.append(Path(__file__).resolve().parent / "icon.ico")
-    for p in candidates:
-        if p.is_file():
-            return str(p)
+    """返回 icon.ico 的绝对路径字符串, 不存在则返回 None."""
+    if getattr(sys, 'frozen', False):
+        base = sys._MEIPASS
+    else:
+        base = os.path.dirname(os.path.abspath(__file__))
+    icon_path = Path(base) / "icon.ico"
+    if icon_path.is_file():
+        return str(icon_path)
     return None
+
 
 # ---------------- 核心依赖检查 ----------------
 MISSING = []
 try:
-    import fitz  # PyMuPDF
+    import fitz
 except ImportError:
     MISSING.append("PyMuPDF")
 
@@ -89,15 +80,14 @@ if MISSING:
     print("请运行: pip install -r requirements.txt")
     sys.exit(1)
 
-# 可选依赖
 try:
-    import docx  # python-docx
+    import docx
     HAS_DOCX = True
 except ImportError:
     HAS_DOCX = False
 
 try:
-    import win32com.client  # pywin32
+    import win32com.client
     HAS_WIN32 = True
 except ImportError:
     HAS_WIN32 = False
@@ -118,7 +108,6 @@ except ImportError:
 # ================================================================
 # 支持的扩展名与类型分组
 # ================================================================
-# 类型分组 (供 GUI 显示)
 TYPE_GROUPS = {
     "Documents": {
         "label": "文档 (Documents)",
@@ -154,9 +143,7 @@ TYPE_GROUPS = {
     },
 }
 
-# 扩展名 -> 分类 (与前端一致)
 SUPPORTED_EXTS: Dict[str, str] = {}
-# 文本类 (显示代码预览)
 TEXT_CATEGORIES = {"txt", "md", "rtf", "log", "csv", "json", "xml", "yaml", "yml",
                    "ini", "cfg", "conf", "bat", "sh", "ps1", "r", "jl", "lua",
                    "html", "htm", "css", "js", "jsx", "ts", "tsx", "vue", "svelte",
@@ -164,12 +151,12 @@ TEXT_CATEGORIES = {"txt", "md", "rtf", "log", "csv", "json", "xml", "yaml", "yml
                    "cs", "java", "go", "rs", "kt", "swift", "d", "f", "sql",
                    "vb", "aspx", "cshtml", "razor"}
 
+
 def _build_ext_map():
-    """根据 TYPE_GROUPS 构建扩展名 -> 分类 映射"""
     _EBOOK_EXTS = {"epub", "mobi", "azw3"}
     for group_key, group in TYPE_GROUPS.items():
         for ext in group["exts"]:
-            cat = group_key  # 用分组名作为 category
+            cat = group_key
             if ext in TEXT_CATEGORIES:
                 cat = "text"
             elif ext in ("pdf",):
@@ -185,20 +172,12 @@ def _build_ext_map():
             SUPPORTED_EXTS[ext] = cat
 
 _build_ext_map()
+SUPPORTED_EXTS["rtf"] = "text"
 
-# 去重后的扩展名列表 (rtf 同时在 Documents 和 Text, 优先 Documents 的分类)
-# 重新调整 rtF
-SUPPORTED_EXTS["rtf"] = "text"  # RTF 按文本处理, 便于解析
-
-# 缩略图尺寸
 THUMB_W = 400
-THUMB_H = 560   # 纵向, 像书的封面比例
-
-# 文本缩略图最多行数与字符
+THUMB_H = 560
 TXT_MAX_LINES = 22
 TXT_MAX_CHARS = 60
-
-# 跳过目录
 SKIP_DIRS = {".git", ".svn", "__pycache__", "node_modules", "$RECYCLE.BIN", "System Volume Information"}
 
 
@@ -223,7 +202,6 @@ def ensure_dir(p: Path):
 
 
 def file_signature(path: str) -> Tuple[int, float]:
-    """返回 (size, mtime) 作为文件变动签名"""
     try:
         st = os.stat(path)
         return st.st_size, st.st_mtime
@@ -280,23 +258,18 @@ def _draw_text_thumbnail(title: str, subtitle: str, lines: list, out_path: Path,
 # ================================================================
 @dataclass
 class CacheEntry:
-    path: str              # 绝对路径
-    size: int              # 文件大小
-    mtime: float           # 修改时间
-    thumb_id: str          # 缩略图文件名(不含路径)
+    path: str
+    size: int
+    mtime: float
+    thumb_id: str
     ext: str = ""
     category: str = ""
-
-    def signature(self) -> Tuple[int, float]:
-        return self.size, self.mtime
 
     def matches(self, new_size: int, new_mtime: float) -> bool:
         return self.size == new_size and abs(self.mtime - new_mtime) < 0.1
 
 
 class FileCache:
-    """基于 scan_cache.json 的增量扫描缓存"""
-
     def __init__(self, cache_path: Path):
         self.path = cache_path
         self.entries: Dict[str, CacheEntry] = {}
@@ -331,18 +304,14 @@ class FileCache:
         tmp.replace(self.path)
 
     def is_changed(self, path: str) -> bool:
-        """检查文件是否变动或新增"""
         if path not in self.entries:
-            return True  # 新文件
+            return True
         ent = self.entries[path]
         size, mtime = file_signature(path)
         return not ent.matches(size, mtime)
 
     def is_processed(self, path: str) -> bool:
         return path in self.entries and not self.is_changed(path)
-
-    def get(self, path: str) -> Optional[CacheEntry]:
-        return self.entries.get(path)
 
     def put(self, path: str, thumb_id: str, ext: str, category: str):
         size, mtime = file_signature(path)
@@ -358,7 +327,6 @@ class FileCache:
         return set(self.entries.keys())
 
     def sync_deleted(self, current_paths: Set[str], thumb_dir: Path, log=print):
-        """删除已不存在的文件的缓存项与缩略图"""
         deleted = set()
         for p in self.all_paths():
             if p not in current_paths:
@@ -377,7 +345,6 @@ class FileCache:
                         log(f"  [rm] 已删除: {p}")
                     except Exception:
                         pass
-                # 清理多页缩略图 (_2.png, _3.png ...)
                 stem = thumb_path.stem
                 for i in range(2, 11):
                     multi_path = thumb_dir / f"{stem}_{i}.png"
@@ -393,29 +360,25 @@ class FileCache:
 
 
 # ================================================================
-# 缩略图生成 (支持多页)
+# 缩略图生成
 # ================================================================
 def gen_pdf_thumbnail(pdf_path: str, out_path: Path, page_count: int = 1) -> bool:
-    """生成 PDF 缩略图: 第一页作为封面 out_path, 多页时额外保存 _2, _3..."""
     try:
         doc = fitz.open(pdf_path)
         if doc.page_count == 0:
             doc.close()
             return False
         pages_to_render = min(page_count, doc.page_count)
-        # 每页都用完整尺寸渲染, 不再拼接压缩
         zoom = THUMB_W / 72.0 * 1.3
         mat = fitz.Matrix(zoom, zoom)
         for i in range(pages_to_render):
             page = doc.load_page(i)
             pix = page.get_pixmap(matrix=mat, alpha=False)
             img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
-            # 缩放到统一尺寸
             img = img.resize((THUMB_W, THUMB_H), Image.LANCZOS)
             if i == 0:
                 img.save(out_path, "PNG", optimize=True)
             else:
-                # 多页: 保存为 out_path_2.png, out_path_3.png ...
                 multi_path = out_path.with_name(
                     out_path.stem + f"_{i+1}" + out_path.suffix
                 )
@@ -438,7 +401,6 @@ def gen_word_thumbnail(word_path: str, ext: str, out_path: Path, page_count: int
                 pass
             if ok:
                 return True
-    # 降级: 读取文本
     text_lines = []
     title = os.path.basename(word_path)
     if ext == "docx" and HAS_DOCX:
@@ -483,8 +445,6 @@ def _word_to_pdf_via_win32(word_path: str, pdf_path: str) -> bool:
 
 
 def gen_ppt_thumbnail(ppt_path: str, ext: str, out_path: Path, page_count: int = 1) -> bool:
-    """生成 PPT 缩略图: 优先转 PDF 渲染, 否则提取幻灯片文字"""
-    # 1) 尝试用 COM 转 PDF
     if HAS_WIN32:
         tmp_pdf = out_path.with_suffix(".tmp.pdf")
         if _ppt_to_pdf_via_win32(ppt_path, str(tmp_pdf)):
@@ -496,7 +456,6 @@ def gen_ppt_thumbnail(ppt_path: str, ext: str, out_path: Path, page_count: int =
             if ok:
                 return True
 
-    # 2) python-pptx 提取文本
     text_lines = []
     title = os.path.basename(ppt_path)
     if HAS_PPTX and ext == "pptx":
@@ -536,7 +495,7 @@ def _ppt_to_pdf_via_win32(ppt_path: str, pdf_path: str) -> bool:
     try:
         app = win32com.client.Dispatch("PowerPoint.Application")
         pres = app.Presentations.Open(os.path.abspath(ppt_path), ReadOnly=True, WithWindow=False)
-        pres.SaveAs(os.path.abspath(pdf_path), FileFormat=32)  # 32 = wdFormatPDF
+        pres.SaveAs(os.path.abspath(pdf_path), FileFormat=32)
         pres.Close()
         return os.path.exists(pdf_path)
     except Exception as e:
@@ -551,7 +510,6 @@ def _ppt_to_pdf_via_win32(ppt_path: str, pdf_path: str) -> bool:
 
 
 def gen_epub_thumbnail(epub_path: str, out_path: Path) -> bool:
-    """电子书 (EPUB/MOBI/AZW3): 提取封面或首页文本, 失败则显示通用缩略图"""
     title = os.path.basename(epub_path)
     ext = os.path.splitext(epub_path)[1].lower().lstrip(".")
     text_lines = []
@@ -564,7 +522,7 @@ def gen_epub_thumbnail(epub_path: str, out_path: Path) -> bool:
                     title = book.get_metadata("DC", "title")[0][0]
             except Exception:
                 pass
-            items = list(book.get_items_of_type(9))  # 9 = ITEM_DOCUMENT
+            items = list(book.get_items_of_type(9))
             for item in items[:3]:
                 try:
                     content = item.get_content().decode("utf-8", errors="ignore")
@@ -599,7 +557,6 @@ def gen_epub_thumbnail(epub_path: str, out_path: Path) -> bool:
 
 
 def gen_text_thumbnail(file_path: str, out_path: Path, ext: str = "") -> bool:
-    """生成文本/代码文件缩略图"""
     title = os.path.basename(file_path)
     lines = []
     try:
@@ -650,16 +607,14 @@ def gen_generic_thumbnail(file_path: str, ext: str, out_path: Path) -> bool:
 
 
 # ================================================================
-# Web 服务器 (静态文件 + 本地操作 API)
+# Web 服务器
 # ================================================================
 def _guess_mime(path: str) -> str:
-    """根据扩展名推断 MIME 类型, 供浏览器内联预览使用"""
     import mimetypes
     mtype, _ = mimetypes.guess_type(path)
     if mtype:
         return mtype
     ext = path.rsplit(".", 1)[-1].lower() if "." in path else ""
-    # mimetypes 库覆盖不全的常见类型
     map_extra = {
         "pdf": "application/pdf",
         "md": "text/markdown; charset=utf-8",
@@ -678,8 +633,6 @@ def _guess_mime(path: str) -> str:
 
 
 class WebServer:
-    """基于 http.server 的本地 Web 服务器, 支持静态文件和 API 路由"""
-
     def __init__(self, site_dir: str, port: int = 8080, log_fn=None):
         import http.server
         import socketserver
@@ -691,7 +644,6 @@ class WebServer:
         self._server = None
         self._thread = None
 
-        # 动态创建 Handler 类 (闭包捕获 self)
         srv = self
 
         class Handler(http.server.SimpleHTTPRequestHandler):
@@ -707,13 +659,11 @@ class WebServer:
                 self.wfile.write(body)
 
             def do_GET(self):
-                """静态文件 + API GET"""
                 if self.path.startswith("/api/"):
                     return self._handle_api_get()
                 return super().do_GET()
 
             def do_POST(self):
-                """API POST 路由"""
                 if self.path.startswith("/api/"):
                     return self._handle_api_post()
                 self.send_error(404, "Not Found")
@@ -726,7 +676,6 @@ class WebServer:
                 self.send_error(404, "Unknown API")
 
             def _serve_file(self):
-                """通过服务器代理文件让浏览器直接预览 (避免 file:// 被拦截)"""
                 from urllib.parse import urlparse, unquote, quote
                 parsed = urlparse(self.path)
                 params = {}
@@ -809,7 +758,6 @@ class WebServer:
                     if not os.path.exists(path):
                         return self._send_json({"ok": False, "error": "文件不存在"}, 404)
                     if os.name == "nt":
-                        # explorer /select,"文件路径" 选中该文件
                         import subprocess
                         subprocess.Popen(f'explorer /select,"{path}"', shell=True)
                     elif sys.platform == "darwin":
@@ -836,13 +784,12 @@ class WebServer:
                     return self._send_json({"ok": False, "error": str(e)}, 500)
 
             def log_message(self, fmt, *args):
-                # 静默或通过 log_fn 输出
                 pass
 
         self.Handler = Handler
 
     def start(self):
-        """启动服务器 (非阻塞, 在后台线程运行)"""
+            
         if self._server:
             return False, "服务器已在运行"
         try:
@@ -856,7 +803,6 @@ class WebServer:
             return True, f"http://127.0.0.1:{self.port}"
         except OSError as e:
             if e.errno == 98 or "Address already in use" in str(e):
-                # 端口被占, 尝试下一个
                 self.log_fn(f"端口 {self.port} 被占用, 尝试 {self.port+1}")
                 self.port += 1
                 return self.start()
@@ -864,7 +810,6 @@ class WebServer:
             return False, str(e)
 
     def stop(self):
-        """停止服务器"""
         if not self._server:
             return
         try:
@@ -902,9 +847,7 @@ class Scanner:
         ensure_dir(self.data_dir)
         self.root_data_json = self.output_dir / "data.json"
 
-        # 过滤的扩展名集合, None 表示全部
         self.ext_filter = ext_filter if ext_filter else set(SUPPORTED_EXTS.keys())
-        # 去除重复
         self.ext_filter = set(e.lower().lstrip(".") for e in self.ext_filter)
 
         self.image_count = max(1, min(image_count, 10))
@@ -920,26 +863,18 @@ class Scanner:
         self.new_count = 0
         self.cached_count = 0
 
-        # 进度回调
         self.progress_cb = None
-
-        # 停止标志 (由外部线程设置, 扫描循环中检查)
         self._cancelled = False
-
-        # 进度统计 (扫描中动态更新)
         self._total_files = 0
         self._processed_files = 0
 
-        # 持久化缓存
         self.cache = FileCache(self.data_dir / "scan_cache.json")
 
     def _ensure_site_structure(self):
-        """检测输出目录是否有网站结构, 没有则从模板复制生成"""
         index_html = self.output_dir / "index.html"
         if index_html.exists():
-            return  # 已有网站结构
+            return
 
-        # 查找网站模板目录 (优先级: scanner/data > site > site_template)
         scanner_dir = Path(__file__).parent
         candidates = [
             scanner_dir / "data",
@@ -959,7 +894,6 @@ class Scanner:
         self.log(f"输出目录缺少网站结构, 从模板复制: {template_dir}")
         self.output_dir.mkdir(parents=True, exist_ok=True)
 
-        # 复制模板文件 (index.html, css/, js/), 跳过 data.js / data.json / assets/
         skip_items = {"data.js", "data.json", "assets"}
         for item in template_dir.iterdir():
             if item.name in skip_items:
@@ -978,10 +912,8 @@ class Scanner:
         self.log("✓ 网站结构已生成")
 
     def _count_total_files(self) -> int:
-        """快速统计主目录下符合条件的文件总数 (用于进度条)"""
         count = 0
         for dirpath, dirnames, filenames in os.walk(self.root):
-            # 跳过忽略目录
             dirnames[:] = [d for d in dirnames if d not in SKIP_DIRS and not d.startswith(".")]
             for name in filenames:
                 ext = os.path.splitext(name)[1].lower().lstrip(".")
@@ -990,7 +922,6 @@ class Scanner:
         return count
 
     def _update_scan_progress(self):
-        """根据已处理文件数更新扫描阶段进度 (3% ~ 70%)"""
         if self._total_files <= 0:
             return
         pct = 3 + int(67 * self._processed_files / self._total_files)
@@ -999,7 +930,6 @@ class Scanner:
         self.set_progress(pct, f"扫描中... {self._processed_files}/{self._total_files}")
 
     def cancel(self):
-        """请求停止扫描 (线程安全: 标志位写入)"""
         self._cancelled = True
         try:
             self.log("⚠ 收到停止请求, 正在停止扫描...")
@@ -1007,7 +937,6 @@ class Scanner:
             pass
 
     def _is_cancelled(self) -> bool:
-        """检查是否已请求停止"""
         return self._cancelled
 
     def log(self, msg: str):
@@ -1054,7 +983,6 @@ class Scanner:
         self.set_progress(80, "生成数据文件...")
         elapsed = time.time() - start
 
-        # 统计后缀
         ext_counter = {}
         ext_category = {}
         for f in self.files_flat:
@@ -1088,7 +1016,6 @@ class Scanner:
             "files": self.files_flat,
         }
 
-        # 写出文件
         out_json = self.data_dir / "data.json"
         with open(out_json, "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
@@ -1183,11 +1110,9 @@ class Scanner:
             rel = os.path.relpath(full, self.root).replace("\\", "/")
             self.log(f"[D{depth}] 文件: {rel}")
 
-            # 更新进度
             self._processed_files += 1
             self._update_scan_progress()
 
-            # 增量检查
             thumb_rel, is_new, all_thumbs = self._handle_file(full, ext, fid)
             size = os.path.getsize(full)
             file_node = {
@@ -1209,14 +1134,12 @@ class Scanner:
         return nodes
 
     def _handle_file(self, file_path: str, ext: str, fid: str) -> Tuple[str, bool, list]:
-        """处理单个文件, 返回 (封面缩略图路径, 是否新增/变动, 全部缩略图路径列表)"""
         cat = SUPPORTED_EXTS.get(ext, "text")
         out_name = f"{fid}.png"
         out_path = self.thumb_dir / out_name
         thumb_rel = f"assets/thumbnails/{out_name}"
 
         def _collect_all_thumbs():
-            """收集 fid 对应的所有缩略图 (封面 + _2, _3 ...)"""
             thumbs = [thumb_rel]
             for i in range(2, 11):
                 multi_name = f"{fid}_{i}.png"
@@ -1226,14 +1149,11 @@ class Scanner:
                     break
             return thumbs
 
-        # 检查缓存
         if not self.force_rescan and self.cache.is_processed(file_path):
             if out_path.exists():
                 return thumb_rel, False, _collect_all_thumbs()
-            # 缩略图被手动删除了, 重新生成
             self.log(f"  [regen] 缩略图缺失, 重新生成: {file_path}")
 
-        # 生成缩略图
         ok = self._generate_thumbnail(file_path, ext, cat, out_path)
         if ok and out_path.exists():
             self.cache.put(file_path, out_name, ext, cat)
@@ -1295,15 +1215,19 @@ class ScannerGUI:
         self.messagebox = messagebox
         self.scrolledtext = scrolledtext
 
-        # 关键: 在创建 Tk 窗口前设置 AppUserModelID, 才能让任务栏/Alt-Tab
-        #       显示本应用图标而非默认 Python 图标 (Windows 7+)
+        # ★★★ 确定软件根目录（所有方法共用）★★★
+        if getattr(sys, 'frozen', False):
+            self.base_dir = Path(sys.executable).parent
+        else:
+            self.base_dir = Path(__file__).resolve().parent
+
         set_app_user_model_id()
 
         self.root = tk.Tk()
         self.root.title("本地文档浏览器 - 扫描器")
-        self.root.geometry("760x860")
-        self.root.minsize(720, 780)
-        # 设置窗口左上角图标 (多尺寸 .ico, 系统按需选择最合适尺寸)
+        self.root.geometry("760x920")
+        self.root.minsize(720, 800)
+
         icon_file = get_icon_path()
         if icon_file:
             try:
@@ -1313,6 +1237,9 @@ class ScannerGUI:
                 pass
 
         self._build_ui()
+
+        # ★★★ 加载历史记录（必须在 _build_ui() 之后）★★★
+        self._load_history()
 
     def _build_ui(self):
         tk = self.tk
@@ -1341,42 +1268,47 @@ class ScannerGUI:
         grp_srv.pack(fill=tk.X, pady=(0, 8))
 
         self.var_port = tk.IntVar(value=8080)
-        ttk.Label(grp_srv, text="端口:").grid(row=0, column=0, sticky=tk.W, padx=(0, 4))
-        ttk.Spinbox(grp_srv, from_=1024, to=65535, textvariable=self.var_port, width=7).grid(row=0, column=1, sticky=tk.W, padx=(0, 12))
+        ttk.Label(grp_srv, text="端口:").grid(row=0, column=0, sticky=tk.W, padx=(0, 4), pady=2)
+        ttk.Spinbox(grp_srv, from_=1024, to=65535, textvariable=self.var_port, width=7).grid(row=0, column=1, sticky=tk.W, padx=(0, 12), pady=2)
 
         self.lbl_srv_status = ttk.Label(grp_srv, text="● 未启动", foreground="#999")
-        self.lbl_srv_status.grid(row=0, column=2, sticky=tk.W, padx=(0, 12))
+        self.lbl_srv_status.grid(row=0, column=2, sticky=tk.W, padx=(0, 12), pady=2)
 
         self.btn_srv_start = ttk.Button(grp_srv, text="启动服务", command=self._start_server, width=8)
-        self.btn_srv_start.grid(row=0, column=3, padx=(0, 4))
+        self.btn_srv_start.grid(row=0, column=3, padx=(0, 4), pady=2)
         self.btn_srv_stop = ttk.Button(grp_srv, text="停止服务", command=self._stop_server, width=8, state="disabled")
-        self.btn_srv_stop.grid(row=0, column=4, padx=(0, 4))
+        self.btn_srv_stop.grid(row=0, column=4, padx=(0, 4), pady=2)
         self.btn_srv_open = ttk.Button(grp_srv, text="在浏览器中打开", command=self._open_browser, state="disabled")
-        self.btn_srv_open.grid(row=0, column=5, padx=(0, 4))
+        self.btn_srv_open.grid(row=0, column=5, padx=(0, 4), pady=2)
 
-        self.web_server = None  # WebServer 实例
-        self._scanner = None    # 当前扫描器实例 (用于停止扫描)
+        # ★★★ 下拉选择网站（历史记录）★★★
+        ttk.Label(grp_srv, text="选择网站:").grid(row=1, column=0, sticky=tk.W, padx=(0, 4), pady=(4, 2))
+        self.var_site_dir = tk.StringVar()
+        self.site_combo = ttk.Combobox(grp_srv, textvariable=self.var_site_dir, width=50, state="readonly")
+        self.site_combo.grid(row=1, column=1, columnspan=3, sticky=tk.W, padx=(0, 12), pady=(4, 2))
+        ttk.Button(grp_srv, text="刷新列表", command=self._refresh_site_list, width=8).grid(row=1, column=4, padx=(0, 4), pady=(4, 2))
+        ttk.Button(grp_srv, text="删除选中", command=self._remove_site, width=8).grid(row=1, column=5, padx=(0, 4), pady=(4, 2))
 
-        # --- 文件类型勾选 (按扩展名后缀显示) ---
+        self.web_server = None
+        self._scanner = None
+
+        # --- 文件类型勾选 ---
         grp_type = ttk.LabelFrame(frm, text="② 扫描的文件类型 (按后缀勾选)", padding=10)
         grp_type.pack(fill=tk.X, pady=(0, 8))
 
-        # 收集所有扩展名 (按优先级分组排序: 文档/电子书优先, 再代码, 最后其他)
         priority_order = [
-            "pdf", "doc", "docx", "rtf",           # 文档
-            "epub", "mobi", "azw3",                # 电子书
-            "ppt", "pptx",                         # 幻灯片
-            "txt", "md",                            # 常见文本
+            "pdf", "doc", "docx", "rtf",
+            "epub", "mobi", "azw3",
+            "ppt", "pptx",
+            "txt", "md",
         ]
         all_exts = set()
         for info in self.TYPE_GROUPS.values():
             all_exts.update(info["exts"])
-        # 优先扩展在前(保持指定顺序), 其余按字母序追加
         prioritized = [e for e in priority_order if e in all_exts]
         remaining = sorted(all_exts - set(prioritized), key=str.lower)
         self._all_exts = prioritized + remaining
 
-        # 操作栏: 全选 / 全不选 / 反选
         bar = ttk.Frame(grp_type)
         bar.pack(fill=tk.X, pady=(0, 6))
         ttk.Button(bar, text="全选", width=6, command=lambda: self._toggle_all(True)).pack(side=tk.LEFT, padx=(0, 4))
@@ -1385,7 +1317,6 @@ class ScannerGUI:
         self.lbl_ext_count = ttk.Label(bar, text="", foreground="#555")
         self.lbl_ext_count.pack(side=tk.LEFT, padx=(12, 0))
 
-        # 可滚动勾选区
         canvas_area = tk.Frame(grp_type, height=200, bd=1, relief=tk.SUNKEN)
         canvas_area.pack(fill=tk.X, pady=(0, 6))
         canvas_area.pack_propagate(False)
@@ -1399,16 +1330,13 @@ class ScannerGUI:
         self._ext_frame = ttk.Frame(self._canvas)
         self._canvas_window = self._canvas.create_window((0, 0), window=self._ext_frame, anchor=tk.NW)
 
-        # 绑定滚动 & 自适应宽度
         self._ext_frame.bind("<Configure>", self._on_ext_frame_configure)
         self._canvas.bind("<Configure>", self._on_canvas_configure)
         self._canvas.bind("<MouseWheel>", self._on_mousewheel)
 
-        # 渲染勾选框
-        self._ext_vars = {}  # ext -> BooleanVar
+        self._ext_vars = {}
         self._render_ext_checkboxes()
 
-        # 自定义添加后缀
         custom_frame = ttk.Frame(grp_type)
         custom_frame.pack(fill=tk.X, pady=(2, 0))
         ttk.Label(custom_frame, text="添加自定义后缀:").pack(side=tk.LEFT, padx=(0, 4))
@@ -1466,17 +1394,202 @@ class ScannerGUI:
         self.txt_log.see("end")
         self.root.update_idletasks()
 
-    # ---- 扩展名勾选区: 渲染与交互 ----
+    # ================================================================
+    # 历史记录 (INI 文件)
+    # ================================================================
+
+    def _get_config_file(self):
+        """获取配置文件路径：根目录能写就用根目录，否则降级到用户目录"""
+        root_ini = self.base_dir / "doc_scanner.ini"
+
+        try:
+            # 测试根目录是否有写入权限
+            root_ini.parent.mkdir(parents=True, exist_ok=True)
+            with open(root_ini, 'a', encoding='utf-8') as f:
+                pass
+            return root_ini
+        except Exception:
+            # 根目录无权限，降级到用户目录
+            user_ini = Path(os.path.expanduser("~")) / ".doc_scanner.ini"
+            try:
+                user_ini.parent.mkdir(parents=True, exist_ok=True)
+                with open(user_ini, 'a', encoding='utf-8') as f:
+                    pass
+            except Exception:
+                pass
+            return user_ini
+
+    def _load_history(self):
+        """启动时读取 INI 文件，恢复上次的站点和输出目录"""
+        try:
+            config_file = self._get_config_file()
+            if not config_file.exists():
+                self._refresh_site_list()
+                return
+
+            config = configparser.ConfigParser()
+            config.read(config_file, encoding="utf-8")
+
+            if config.has_option("settings", "output_dir"):
+                saved = config.get("settings", "output_dir")
+                if saved and os.path.isdir(saved):
+                    self.var_out.set(saved)
+
+            self._refresh_site_list()
+
+            if config.has_option("history", "last"):
+                last = config.get("history", "last")
+                if last and os.path.isdir(last) and os.path.exists(os.path.join(last, "index.html")):
+                    self.var_site_dir.set(last)
+                    self._log(f"恢复上次站点: {last}")
+                    self.root.after(500, self._start_server)
+                else:
+                    sites = self.site_combo["values"]
+                    if sites:
+                        self.var_site_dir.set(sites[0])
+                        self._log(f"恢复站点: {sites[0]}")
+                        self.root.after(500, self._start_server)
+        except Exception as e:
+            self._log(f"读取历史记录失败: {e}")
+            self._refresh_site_list()
+
+
+
+
+    def _save_history(self, site_dir: str = None):
+        """保存当前站点到 INI 文件"""
+        config_file = self._get_config_file()
+        config = configparser.ConfigParser()
+
+        if config_file.exists():
+            try:
+                config.read(config_file, encoding="utf-8")
+            except Exception:
+                pass
+
+        if not config.has_section("settings"):
+            config.add_section("settings")
+        if not config.has_section("history"):
+            config.add_section("history")
+
+        out_dir = self.var_out.get().strip()
+        if out_dir:
+            config.set("settings", "output_dir", out_dir)
+
+        current = site_dir or self.var_site_dir.get().strip()
+        if current and os.path.isdir(current):
+            existing = []
+            for key, value in config.items("history"):
+                if key.startswith("site_") and value == current:
+                    existing.append(key)
+            if not existing:
+                max_num = 0
+                for key, _ in config.items("history"):
+                    if key.startswith("site_"):
+                        try:
+                            num = int(key.split("_")[1])
+                            if num > max_num:
+                                max_num = num
+                        except Exception:
+                            pass
+                config.set("history", f"site_{max_num + 1}", current)
+
+            config.set("history", "last", current)
+
+        try:
+            with open(config_file, "w", encoding="utf-8") as f:
+                config.write(f)
+        except Exception as e:
+            self._log(f"保存历史记录失败: {e}")
+
+    def _refresh_site_list(self):
+        """刷新下拉列表：从 INI 历史记录中读取"""
+        try:
+            config_file = self._get_config_file()
+            sites = []
+
+            if config_file.exists():
+                try:
+                    config = configparser.ConfigParser()
+                    config.read(config_file, encoding="utf-8")
+                    if config.has_section("history"):
+                        for key, value in config.items("history"):
+                            if key.startswith("site_") and value:
+                                if os.path.isdir(value) and os.path.exists(os.path.join(value, "index.html")):
+                                    sites.append(value)
+                except Exception as e:
+                    self._log(f"刷新列表失败: {e}")
+
+            sites = list(dict.fromkeys(sites))
+            self.site_combo["values"] = sites
+
+            if sites:
+                current = self.var_site_dir.get()
+                if not current or current not in sites:
+                    self.var_site_dir.set(sites[0])
+            else:
+                self.var_site_dir.set("")
+
+            if sites:
+                self._log(f"已加载 {len(sites)} 个历史站点")
+        except Exception as e:
+            self._log(f"刷新列表异常: {e}")
+            self.site_combo["values"] = []
+            self.var_site_dir.set("")
+        return sites
+
+    def _remove_site(self):
+        """从历史记录中删除选中的站点"""
+        current = self.var_site_dir.get().strip()
+        if not current:
+            self._log("请先选择一个站点")
+            return
+
+        if not self.messagebox.askyesno("确认删除", f"确定从历史记录中删除?\n{current}"):
+            return
+
+        config_file = self._get_config_file()
+        if not config_file.exists():
+            return
+
+        try:
+            config = configparser.ConfigParser()
+            config.read(config_file, encoding="utf-8")
+
+            to_remove = []
+            if config.has_section("history"):
+                for key, value in config.items("history"):
+                    if key.startswith("site_") and value == current:
+                        to_remove.append(key)
+                for key in to_remove:
+                    config.remove_option("history", key)
+
+                if config.has_option("history", "last"):
+                    last = config.get("history", "last")
+                    if last == current:
+                        config.remove_option("history", "last")
+
+            with open(config_file, "w", encoding="utf-8") as f:
+                config.write(f)
+
+            self._log(f"已删除站点: {current}")
+            self._refresh_site_list()
+
+            if self.web_server and self.web_server.running:
+                self._stop_server()
+
+        except Exception as e:
+            self._log(f"删除站点失败: {e}")
+
+    # ---- 扩展名勾选区 ----
     def _render_ext_checkboxes(self):
-        """渲染所有扩展名勾选框 (显示为 .ext 格式)"""
         tk = self.tk
         ttk = self.ttk
-        # 清空旧内容
         for child in self._ext_frame.winfo_children():
             child.destroy()
         self._ext_vars.clear()
 
-        cols = 9  # 每行 9 个
+        cols = 9
         for idx, ext in enumerate(self._all_exts):
             row, col = divmod(idx, cols)
             var = tk.BooleanVar(value=True)
@@ -1486,38 +1599,31 @@ class ScannerGUI:
             cb.grid(row=row, column=col, sticky=tk.W, padx=(4, 10), pady=1)
 
     def _on_ext_frame_configure(self, event=None):
-        """内容变化时更新滚动范围"""
         self._canvas.configure(scrollregion=self._canvas.bbox("all"))
 
     def _on_canvas_configure(self, event=None):
-        """Canvas 大小变化时, 让内部 frame 宽度跟随"""
         self._canvas.itemconfig(self._canvas_window, width=event.width)
 
     def _on_mousewheel(self, event=None):
-        """鼠标滚轮滚动"""
         delta = -1 if event.delta > 0 else 1
         self._canvas.yview_scroll(delta, "units")
 
     def _toggle_all(self, state: bool):
-        """全选 / 全不选"""
         for var in self._ext_vars.values():
             var.set(state)
         self._update_ext_count()
 
     def _invert_selection(self):
-        """反选"""
         for var in self._ext_vars.values():
             var.set(not var.get())
         self._update_ext_count()
 
     def _update_ext_count(self):
-        """更新底部计数提示"""
         total = len(self._ext_vars)
         selected = sum(1 for v in self._ext_vars.values() if v.get())
         self.lbl_ext_count.config(text=f"已勾选 {selected} / {total} 个后缀")
 
     def _add_custom_ext(self):
-        """添加自定义扩展名"""
         raw = self.var_custom_ext.get().strip().lstrip(".").lower()
         if not raw:
             self._log("⚠ 请输入扩展名, 例如 .pdf")
@@ -1526,7 +1632,6 @@ class ScannerGUI:
             self._log(f"⚠ 扩展名只能包含字母数字: {raw}")
             return
         if raw in self._ext_vars:
-            # 已存在则勾选并提示
             if not self._ext_vars[raw].get():
                 self._ext_vars[raw].set(True)
                 self._update_ext_count()
@@ -1535,19 +1640,16 @@ class ScannerGUI:
                 self._log(f"该后缀已存在且已勾选: .{raw}")
             return
 
-        # 新增
         self._all_exts.append(raw)
         self._all_exts = sorted(self._all_exts, key=str.lower)
         self._render_ext_checkboxes()
         self._update_ext_count()
         self.var_custom_ext.set("")
         self._log(f"✓ 已添加自定义后缀: .{raw}")
-        # 滚动到新项
         self.root.update_idletasks()
         self._canvas.yview_moveto(1.0)
 
     def _get_selected_exts(self) -> set:
-        """获取已勾选的扩展名集合 (不含前导点)"""
         return {ext for ext, var in self._ext_vars.items() if var.get()}
 
     def _choose_root(self):
@@ -1559,7 +1661,7 @@ class ScannerGUI:
         d = self.filedialog.askdirectory(title="选择静态网站输出目录")
         if d:
             self.var_out.set(d)
-            # 输出目录变化时, 如果服务器在运行则重启
+            self._refresh_site_list()
             if self.web_server and self.web_server.running:
                 self._log("输出目录已变更, 重启 Web 服务...")
                 self._stop_server()
@@ -1567,26 +1669,38 @@ class ScannerGUI:
 
     # ---- Web 服务器控制 ----
     def _auto_start_server(self):
-        """扫描完成后自动启动服务器"""
         if self.web_server and self.web_server.running:
             self._log("Web 服务已在运行")
             return
-        out_dir = self.var_out.get().strip()
+        out_dir = self.var_site_dir.get().strip()
+        if not out_dir or not os.path.isdir(out_dir):
+            out_dir = self.var_out.get().strip()
         if out_dir and os.path.exists(os.path.join(out_dir, "index.html")):
             self._start_server()
         else:
-            self._log("输出目录无 index.html, 跳过自动启动")
+            self._log("无有效站点, 跳过自动启动")
 
     def _start_server(self):
-        out_dir = self.var_out.get().strip()
+        out_dir = self.var_site_dir.get().strip()
+        
+
+        if not out_dir or not os.path.isdir(out_dir):
+            out_dir = self.var_out.get().strip()
+            
+
         if not out_dir or not os.path.isdir(out_dir):
             self.messagebox.showwarning("提示", "输出目录不存在, 请先扫描生成数据")
             return
-        # 检查 index.html
+
+        
+
         if not os.path.exists(os.path.join(out_dir, "index.html")):
-            self.messagebox.showwarning("提示", "输出目录中未找到 index.html, 请先扫描")
+            self.messagebox.showwarning("提示", f"目录中未找到 index.html:\n{out_dir}")
             return
+
         port = self.var_port.get()
+        
+
         self.web_server = WebServer(out_dir, port=port, log_fn=self._log)
         ok, url = self.web_server.start()
         if ok:
@@ -1595,6 +1709,8 @@ class ScannerGUI:
             self.btn_srv_stop.config(state="normal")
             self.btn_srv_open.config(state="normal")
             self._server_url = url
+            self._save_history(out_dir)
+           
         else:
             self.messagebox.showerror("启动失败", url)
 
@@ -1621,7 +1737,6 @@ class ScannerGUI:
         if not out:
             return
         root = Path(out)
-        # 需要删除的单独文件
         del_files = [
             root / "assets" / "data" / "scan_cache.json",
             root / "assets" / "data" / "data.json",
@@ -1639,19 +1754,16 @@ class ScannerGUI:
         if not self.messagebox.askyesno("确认", "\n".join(msg)):
             return
         try:
-            # 删除单个文件
             for f in del_files:
                 if f.exists():
                     f.unlink()
                     self._log(f"已删除: {f}")
-            # 删除缩略图目录下所有png
             if thumb_dir.is_dir():
                 for png in thumb_dir.glob("*.png"):
                     png.unlink()
                     self._log(f"已删除缩略图: {png}")
         except Exception as e:
             self._log(f"删除缓存异常: {e}")
-
 
     def _open_output(self):
         out = self.var_out.get().strip()
@@ -1680,6 +1792,11 @@ class ScannerGUI:
             self.messagebox.showwarning("提示", "请至少勾选一种文件类型")
             return
 
+        # ★★★ 如果 Web 服务正在运行，先停止 ★★★
+        if self.web_server and self.web_server.running:
+            self._log("正在停止当前 Web 服务...")
+            self._stop_server()
+
         self.btn_scan.config(state="disabled")
         self.btn_stop.config(state="normal")
         self.progress["value"] = 0
@@ -1701,9 +1818,15 @@ class ScannerGUI:
                     self._log("⏹ 扫描已停止")
                 else:
                     self._log("✓ 扫描完成!")
-                    # 自动启动 Web 服务
-                    self.root.after(100, self._auto_start_server)
-                    self.messagebox.showinfo("完成", f"扫描完成!\nWeb 服务已自动启动\n点击「在浏览器中打开」即可使用")
+                    # ★★★ 保存到历史记录 ★★★
+                    self._save_history(out_dir)
+                    # ★★★ 刷新下拉列表 ★★★
+                    self.root.after(100, self._refresh_site_list)
+                    # ★★★ 强制选中新扫描的站点 ★★★
+                    self.var_site_dir.set(out_dir)
+                    # ★★★ 启动服务 ★★★
+                    self.root.after(200, self._start_server)
+                    self.messagebox.showinfo("完成", "扫描完成!\nWeb 服务已自动启动\n点击「在浏览器中打开」即可使用")
             except Exception as e:
                 self._log(f"[error] 扫描异常: {e}")
                 traceback.print_exc()
@@ -1733,17 +1856,22 @@ class ScannerGUI:
 
 
 # ================================================================
-# 入口 (支持命令行与 GUI)
+# 入口
 # ================================================================
 def main():
+    if sys.platform == "win32":
+        try:
+            import ctypes
+            ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("DocumentScanner.LocalBrowser.v1")
+        except Exception:
+            pass
+
     args = sys.argv[1:]
 
-    # 如果带参数, 走命令行模式
     if args:
         run_cli(args)
         return
 
-    # 否则启动 GUI
     try:
         gui = ScannerGUI()
         gui.run()
@@ -1764,9 +1892,11 @@ def run_cli(args):
     while i < len(args):
         a = args[i]
         if a == "--root" and i + 1 < len(args):
-            root_dir = args[i + 1]; i += 2
+            root_dir = args[i + 1]
+            i += 2
         elif a == "--out" and i + 1 < len(args):
-            output_dir = args[i + 1]; i += 2
+            output_dir = args[i + 1]
+            i += 2
         elif a == "--pages" and i + 1 < len(args):
             try:
                 pages = int(args[i + 1])
@@ -1777,7 +1907,8 @@ def run_cli(args):
             exts_filter = set(e.strip().lower().lstrip(".") for e in args[i + 1].split(","))
             i += 2
         elif a == "--force":
-            force = True; i += 1
+            force = True
+            i += 1
         else:
             i += 1
 

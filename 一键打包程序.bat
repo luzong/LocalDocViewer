@@ -1,118 +1,91 @@
 @echo off
-chcp 65001 >nul 2>&1
-title Scanner Pack Tool
+title Document Scanner Pack
 
-echo ============================================================
-echo            Document Scanner - Pack Tool
-echo ============================================================
+echo ============================================
+echo       Document Scanner Pack Tool
+echo ============================================
 echo.
 
-REM Check Python
-echo [1/7] Checking Python...
 python --version >nul 2>&1
-if errorlevel 1 (
-    echo [ERROR] Python not found, please install Python 3.8+
+if %errorlevel% neq 0 (
+    echo [ERROR] Python not found
     pause
     exit /b 1
 )
-python --version
 echo [OK] Python ready
 echo.
 
-REM Check and install PyInstaller
-echo [2/7] Checking PyInstaller...
-pip show pyinstaller >nul 2>&1
-if errorlevel 1 (
-    echo [INFO] Installing PyInstaller...
-    pip install pyinstaller -i https://pypi.tuna.tsinghua.edu.cn/simple
-    if errorlevel 1 (
-        echo [ERROR] PyInstaller install failed
-        pause
-        exit /b 1
-    )
-)
+pip install pyinstaller -i https://pypi.tuna.tsinghua.edu.cn/simple >nul 2>&1
 echo [OK] PyInstaller ready
 echo.
 
-REM Install dependencies
-echo [3/7] Installing dependencies...
-pip install pymupdf -i https://pypi.tuna.tsinghua.edu.cn/simple -q
-pip install pillow -i https://pypi.tuna.tsinghua.edu.cn/simple -q
-pip install python-docx -i https://pypi.tuna.tsinghua.edu.cn/simple -q
-pip install python-pptx -i https://pypi.tuna.tsinghua.edu.cn/simple -q
-pip install ebooklib -i https://pypi.tuna.tsinghua.edu.cn/simple -q
-pip install pywin32 -i https://pypi.tuna.tsinghua.edu.cn/simple -q
-pip install qrcode[pil] -i https://pypi.tuna.tsinghua.edu.cn/simple -q
-echo [OK] Dependencies ready
+pip install pymupdf pillow python-docx python-pptx ebooklib pywin32 qrcode[pil] -i https://pypi.tuna.tsinghua.edu.cn/simple >nul 2>&1
+echo [OK] Dependencies installed
 echo.
 
-REM Check icon
-echo [4/7] Checking icon...
-if not exist "icon.ico" (
-    echo [WARN] icon.ico not found, using default
-    set ICON_ARG=
-) else (
-    echo [OK] icon.ico found
-    set ICON_ARG=--icon="icon.ico"
-)
-echo.
-
-REM Check scanner.py and data
-echo [5/7] Checking files...
 if not exist "scanner.py" (
-    echo [ERROR] scanner.py not found!
+    echo [ERROR] scanner.py not found
     pause
     exit /b 1
 )
-echo [OK] scanner.py found
 
-if exist "data" (
-    echo [OK] data folder found
-    set DATA_ARG=--add-data="data;data"
+set ICON_CMD=
+if exist "icon.ico" (
+    set ICON_CMD=--icon=icon.ico --add-data "icon.ico;."
+    echo [OK] Icon found
 ) else (
-    echo [WARN] data folder not found
-    set DATA_ARG=
+    echo [WARN] No icon
+)
+
+set DATA_CMD=
+if exist "data" (
+    set DATA_CMD=--add-data "data;data"
+    echo [OK] Data folder found
+) else (
+    echo [WARN] No data folder
 )
 echo.
 
-REM Clean old files
-echo [6/7] Cleaning old files...
-if exist "dist" rmdir /s /q dist
-if exist "build" rmdir /s /q build
-if exist "*.spec" del /q *.spec >nul 2>&1
-echo [OK] Clean done
+if exist "build" rmdir /s /q "build"
+if exist "dist" rmdir /s /q "dist"
+if exist "*.spec" del /q "*.spec"
 echo.
 
-REM Start packaging
-echo [7/7] Packaging...
-echo ============================================================
-echo Script: scanner.py
-echo Output: dist\Scanner.exe
-echo ============================================================
+echo ============================================
+echo       Building Scanner.exe ...
+echo ============================================
 echo.
 
-pyinstaller --onefile --windowed --name="Scanner" %ICON_ARG% %DATA_ARG% --hidden-import=tkinter --hidden-import=tkinter.ttk --hidden-import=fitz --hidden-import=PIL --hidden-import=PIL.Image --hidden-import=PIL.ImageDraw --hidden-import=PIL.ImageFont --hidden-import=docx --hidden-import=pptx --hidden-import=ebooklib --hidden-import=win32com --hidden-import=win32com.client --hidden-import=qrcode --hidden-import=http.server --hidden-import=socketserver --hidden-import=webbrowser --hidden-import=pathlib --hidden-import=json --hidden-import=hashlib --hidden-import=threading --hidden-import=shutil --hidden-import=ctypes --exclude-module=matplotlib --exclude-module=numpy --exclude-module=pandas --exclude-module=scipy --exclude-module=tensorflow --exclude-module=torch --clean --noconfirm scanner.py
+pyinstaller --onefile --windowed --name="Scanner" %ICON_CMD% %DATA_CMD% --clean --noconfirm --hidden-import=tkinter --hidden-import=fitz --hidden-import=PIL --hidden-import=docx --hidden-import=pptx --hidden-import=ebooklib --hidden-import=win32com --hidden-import=qrcode --exclude-module=matplotlib --exclude-module=numpy --exclude-module=pandas scanner.py
 
-if errorlevel 1 (
+if %errorlevel% neq 0 (
     echo.
-    echo ============================================================
-    echo [FAILED] Packaging failed!
-    echo ============================================================
+    echo [ERROR] Build failed!
     pause
     exit /b 1
 )
 
 echo.
-echo ============================================================
-echo [SUCCESS] Packaging completed!
+echo ============================================
+echo       BUILD SUCCESS!
+echo ============================================
 echo Output: dist\Scanner.exe
-echo ============================================================
-echo.
-echo Usage:
-echo   GUI mode: double click Scanner.exe
-echo   CMD mode: Scanner.exe --root "folder path"
-echo   Options: --root, --out, --ext, --pages, --force
 echo.
 
-start explorer dist
+set /p sc="Create desktop shortcut? (Y/N): "
+if /i "%sc%"=="Y" (
+    echo Set WshShell = WScript.CreateObject("WScript.Shell") > %temp%\sc.vbs
+    echo Set lnk = WshShell.CreateShortcut("%USERPROFILE%\Desktop\Scanner.lnk") >> %temp%\sc.vbs
+    echo lnk.TargetPath = "%~dp0dist\Scanner.exe" >> %temp%\sc.vbs
+    echo lnk.IconLocation = "%~dp0icon.ico" >> %temp%\sc.vbs
+    echo lnk.Save >> %temp%\sc.vbs
+    cscript //nologo %temp%\sc.vbs
+    del %temp%\sc.vbs
+    echo [OK] Shortcut created
+)
+
+set /p open="Open output folder? (Y/N): "
+if /i "%open%"=="Y" explorer "dist"
+
+echo.
 pause
