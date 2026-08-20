@@ -699,22 +699,17 @@
         }
     }
 
-    async function openFileInBrowser(file) {
+    function openFileInBrowser(file) {
+        const url = fileUriFromPath(file.path);
         showToast("正在打开文件...", 1500);
-        const r = await apiPost("/api/open-file", { path: file.path });
-        if (r.ok) {
-            showToast("已打开文件", 1500);
-        } else {
-            showToast("打开失败: " + (r.error || "未知错误"), 3000);
-        }
+        window.open(url, "_blank");
     }
 
-    function openFileServe(file) {
-        // 通过服务器代理在浏览器新标签页预览文件
-        const url = "/api/serve-file?path=" + encodeURIComponent(file.path);
-        window.open(url, "_blank");
-        showToast("已在新标签页打开预览", 1500);
-    }
+	function openFileServe(file) {
+	    const url = fileUriFromPath(file.path);
+	    showToast("正在尝试打开文件...", 1500);
+	    window.open(url, "_blank");
+	}
 
     async function tryOpenDir(file) {
         showToast("正在打开文件位置...", 1500);
